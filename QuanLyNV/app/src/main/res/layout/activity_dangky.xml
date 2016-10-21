@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:hint="@string/taikhoandk"
+        android:layout_margin="10dp"
+        android:id="@+id/editTaiKhoanDK" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:hint="@string/matkhau"
+        android:id="@+id/editMatKhau" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:hint="@string/nhaplaimatkhau"
+        android:id="@+id/editNhapLaiMK" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleDangKy"
+            android:layout_marginLeft="80dp"
+            android:id="@+id/btnDangKy" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thoat"
+            android:id="@+id/btnThoat"
+            android:gravity="center"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    tools:context="com.hue.husc.it.nhuquynh.quanlynv.MainActivity">
+
+    <item
+        android:id="@+id/menuDangKy"
+        android:orderInCategory="100"
+        android:icon="@drawable/dangky"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/titleDangKy">
+
+    </item>
+</menu>

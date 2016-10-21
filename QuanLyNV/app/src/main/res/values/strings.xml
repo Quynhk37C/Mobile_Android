@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">QuanLyNV</string>
+    <string name="tendangnhap">Tên Đăng Nhập</string>
+    <string name="hinttendangnhap">Nhập tài khoản</string>
+    <string name="nhapmatkhau">Nhập Mật Khẩu</string>
+    <string name="dongy">Đồng ý</string>
+    <string name="thoat">Thoát</string>
+    <string name="taikhoandk">Nhập tên tài khoản</string>
+    <string name="matkhau">Nhập mật khẩu</string>
+    <string name="nhaplaimatkhau">Nhập lại mật khẩu</string>
+    <string name="titleDangKy">Đăng Ký</string>
+    <string name="menuitemnhanvien">Nhân Viên</string>
+    <string name="menuitemphongban">Phòng Ban</string>
+    <string name="menuitemthethong">Hệ Thống</string>
+    <string name="menuitemtlienhe">Liên Hệ</string>
+</resources>

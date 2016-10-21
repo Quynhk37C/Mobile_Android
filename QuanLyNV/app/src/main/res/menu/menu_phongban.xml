@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    tools:context="com.hue.husc.it.nhuquynh.quanlynv.MainActivity">
+
+    <item android:id="@+id/menuNhanVien"
+        android:title="@string/menuitemnhanvien"
+        app:showAsAction="ifRoom|withText"
+        android:icon="@drawable/nhanvien"/>
+
+    <item android:id="@+id/menuPhongBan"
+        android:title="@string/menuitemphongban"
+        app:showAsAction="ifRoom|withText"
+        android:icon="@drawable/phongban"/>
+
+    <item android:id="@+id/menuHeThong"
+        android:title="@string/menuitemthethong"
+        app:showAsAction="ifRoom|withText"
+        android:icon="@drawable/hethong"/>
+
+    <item android:id="@+id/menuLienHe"
+        android:title="@string/menuitemtlienhe"
+        app:showAsAction="ifRoom|withText"
+        android:icon="@drawable/lienhe"/>
+
+</menu>
