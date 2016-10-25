@@ -2,9 +2,13 @@ package com.hue.husc.it.nhuquynh.quanlynv.DAO;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.hue.husc.it.nhuquynh.quanlynv.DTO.PhongBanDTO;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Admin on 10/20/2016.
@@ -18,12 +22,36 @@ public class PhongBanDAO {
         dbhelper = new Database(context);
 
     }
-
+    public int SuaPhongBan(PhongBanDTO phongban){
+        db = dbhelper.getWritableDatabase();
+        ContentValues values=new ContentValues();
+        values.put(Database.TenPB_PhongBan,phongban.getTenPhongBan());
+        return db.update(Database.TABLE_PHONGBAN,values,Database.MaPB_PhongBan +"=?",new String[]{phongban.getMaPhongBan()});
+    }
+    public int XoaPhongBan(String id){
+        db = dbhelper.getWritableDatabase();
+        return db.delete(Database.TABLE_PHONGBAN,Database.MaPB_PhongBan +"=?",new String[]{id});
+    }
     public void themPhongBan(PhongBanDTO phongban){
         db = dbhelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(Database.TABLE_PHONGBAN,phongban.getTenPhongBan());
+        values.put(Database.TenPB_PhongBan,phongban.getTenPhongBan());
         db.insert(Database.TABLE_PHONGBAN,null,values);
         db.close();
+    }
+    public List<PhongBanDTO> layAllPhongBan(){
+        List<PhongBanDTO> list=new ArrayList<PhongBanDTO>();
+       db= dbhelper.getWritableDatabase();
+        String sql="SELECT * FROM "+Database.TABLE_PHONGBAN;
+        Cursor c=db.rawQuery(sql,null);
+        c.moveToFirst();
+        while (!c.isAfterLast()){
+            PhongBanDTO phongban=new PhongBanDTO();
+            phongban.setTenPhongBan(c.getString(c.getColumnIndex(Database.TenPB_PhongBan)));
+            phongban.setMaPhongBan((c.getString(c.getColumnIndex(Database.MaPB_PhongBan))));
+            list.add(phongban);
+            c.moveToNext();
+        }
+        return list;
     }
 }
