@@ -22,6 +22,10 @@
             android:uiOptions="splitActionBarWhenNarrow">
 
         </activity>
+        <activity android:name=".NhanVienActivity"
+            android:label="Danh sách nhân viên">
+
+        </activity>
     </application>
 
 </manifest>
