@@ -20,7 +20,7 @@ public class Database extends SQLiteOpenHelper {
     public static String DiaChi_NhanVien = "DiaChi";
     public static String Email_NhanVien = "Email";
     public static String Luong_NhanVien = "Luong";
-
+    public  static String NgaySinh_NhanVien="NgaySinh";
     public static String TABLE_PHONGBAN = "PhongBan";
     public static String MaPB_PhongBan = "MaPB";
     public static String TenPB_PhongBan  = "TenPB";
@@ -41,6 +41,7 @@ public class Database extends SQLiteOpenHelper {
                 "                     NOT NULL,\n" +
                 "    "+TenNV_NhanVien+"    TEXT    NOT NULL,\n" +
                 "    "+SDT_NhanVien+"     TEXT,\n" +
+                "    "+NgaySinh_NhanVien+"    TEXT,\n " +
                 "    "+GioiTinh_NhanVien+" TEXT    NOT NULL,\n" +
                 "    "+DiaChi_NhanVien+"   TEXT,\n" +
                 "    "+Email_NhanVien+"    TEXT,\n" +
