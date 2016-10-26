@@ -2,7 +2,10 @@ package com.hue.husc.it.nhuquynh.quanlynv;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -39,10 +42,13 @@ public class PhongBanActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_phongban);
+
         listviewPhongBan = (ListView)findViewById(R.id.listPhongBan);
         layout_phongban = (LinearLayout)findViewById(R.id.layout_phongban);
+
         registerForContextMenu(listviewPhongBan);
         registerForContextMenu(layout_phongban);
+
         dbPhongBan=new PhongBanDAO(this);
         LoadListViewPhongBan();
 
@@ -51,6 +57,15 @@ public class PhongBanActivity extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 position=i;
                 return  false;
+            }
+        });
+
+        listviewPhongBan.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent nvPhongBan = new Intent(PhongBanActivity.this,NhanVienPhongBanActivity.class);
+                nvPhongBan.putExtra("maphongban",String.valueOf(listPhongBan.get(position).getMaPhongBan()));
+                startActivity(nvPhongBan);
             }
         });
     }
@@ -122,16 +137,32 @@ public class PhongBanActivity extends AppCompatActivity {
             btnSua.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    PhongBanDTO phongban=new PhongBanDTO();
+                    final PhongBanDTO phongban=new PhongBanDTO();
                     phongban.setMaPhongBan(listPhongBan.get(position).getMaPhongBan());
                     phongban.setTenPhongBan(editTenPhongBanSua.getText().toString());
-                    if(dbPhongBan.SuaPhongBan(phongban)!=-1){
-                        Toast.makeText(getApplication(),"Đã sửa",Toast.LENGTH_LONG).show();
-                        LoadListViewPhongBan();
-                        dalSua.dismiss();
-                    }else{
-                        Toast.makeText(getApplication(),"Không sửa được",Toast.LENGTH_LONG).show();
-                    }
+
+                    final AlertDialog.Builder builder = new AlertDialog.Builder(PhongBanActivity.this);
+                    builder.setTitle("Thông báo");
+                    builder.setMessage("Bạn có muốn sửa không ?");
+                    builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            if(dbPhongBan.SuaPhongBan(phongban)!=-1){
+                                Toast.makeText(getApplication(),"Đã sửa",Toast.LENGTH_LONG).show();
+                                LoadListViewPhongBan();
+                                dalSua.dismiss();
+                            }else{
+                                Toast.makeText(getApplication(),"Không sửa được",Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                    builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    builder.show();
 
                 }
             });
@@ -155,7 +186,9 @@ public class PhongBanActivity extends AppCompatActivity {
             Toast.makeText(getApplication(),item.getTitle(),Toast.LENGTH_LONG).show();
         }
         if(id == R.id.menuNhanVien){
-            Toast.makeText(getApplication(),item.getTitle(),Toast.LENGTH_LONG).show();
+            Intent iNhanVienActivity =new Intent(PhongBanActivity.this,NhanVienActivity.class);
+            startActivity(iNhanVienActivity);
+
         }
         if(id == R.id.menuLienHe){
             Toast.makeText(getApplication(),item.getTitle(),Toast.LENGTH_LONG).show();

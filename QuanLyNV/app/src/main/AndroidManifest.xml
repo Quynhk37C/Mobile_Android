@@ -23,9 +23,17 @@
 
         </activity>
         <activity android:name=".NhanVienActivity"
-            android:label="Danh sách nhân viên">
+            android:label="Danh sách nhân viên"
+    ></activity>
+        <activity android:name=".NhanVienPhongBanActivity"
+            android:label="Danh Sách Nhân Viên"
+            android:uiOptions="splitActionBarWhenNarrow">
+
 
         </activity>
+        <activity android:name=".ThemNhanVienActivity"
+            android:label="Thêm nhân viên"
+            android:parentActivityName=".NhanVienActivity"></activity>
     </application>
 
 </manifest>
