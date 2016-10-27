@@ -37,6 +37,10 @@ public class NhanVienDAO {
         db.insert(Database.TABLE_NHANVIEN,null,values);
         db.close();
     }
+    public int Xoa(int id){
+        db = dbhelper.getWritableDatabase();
+        return db.delete(Database.TABLE_NHANVIEN,Database.MaNV_NhanVien + "=?", new String[]{String.valueOf(id)});
+    }
     public List<NhanVienDTO> LoadAllNhanvien(){
         List<NhanVienDTO> list=new ArrayList<NhanVienDTO>();
         db= dbhelper.getWritableDatabase();

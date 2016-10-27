@@ -33,7 +33,7 @@
         </activity>
         <activity android:name=".ThemNhanVienActivity"
             android:label="Thêm nhân viên"
-            android:parentActivityName=".NhanVienActivity"></activity>
+           ></activity>
     </application>
 
 </manifest>

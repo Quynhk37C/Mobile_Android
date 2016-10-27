@@ -10,16 +10,16 @@
         android:ems="10"
         android:hint="Nhập tên nhân viên"
         android:layout_marginTop="15dp"
-        android:id="@+id/editText"
+        android:id="@+id/editTenNv"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <RadioGroup
         android:id="@+id/rdGioiTinh"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignRight="@+id/editText"
+        android:layout_below="@+id/editTenNv"
+        android:layout_alignLeft="@+id/editTenNv"
+        android:layout_alignRight="@+id/editTenNv"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
         <RadioButton
@@ -53,7 +53,7 @@
         android:inputType="textPersonName"
         android:hint="Nhập vào địa chỉ"
         android:ems="10"
-        android:id="@+id/editText3"
+        android:id="@+id/editDiaChi"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/spinnerPhongBan"
         android:layout_alignLeft="@+id/rdGioiTinh"
@@ -66,10 +66,10 @@
         android:hint="Nhập ngày sinh"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:id="@+id/editText5"
-        android:layout_below="@+id/editText4"
-        android:layout_alignLeft="@+id/editText4"
-        android:layout_alignStart="@+id/editText4" />
+        android:id="@+id/editNgaySinh"
+        android:layout_below="@+id/editSoDT"
+        android:layout_alignLeft="@+id/editSoDT"
+        android:layout_alignStart="@+id/editSoDT" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -78,10 +78,10 @@
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:hint="Nhập email"
-        android:id="@+id/editText6"
-        android:layout_below="@+id/editText5"
-        android:layout_alignLeft="@+id/editText5"
-        android:layout_alignStart="@+id/editText5" />
+        android:id="@+id/editEmail"
+        android:layout_below="@+id/editNgaySinh"
+        android:layout_alignLeft="@+id/editNgaySinh"
+        android:layout_alignStart="@+id/editNgaySinh" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -90,10 +90,10 @@
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:hint="Nhập số điện thoại"
-        android:id="@+id/editText4"
-        android:layout_below="@+id/editText3"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_alignStart="@+id/editText3" />
+        android:id="@+id/editSoDT"
+        android:layout_below="@+id/editDiaChi"
+        android:layout_alignLeft="@+id/editDiaChi"
+        android:layout_alignStart="@+id/editDiaChi" />
     <EditText
 
         android:layout_width="wrap_content"
@@ -101,9 +101,9 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:hint="Nhập lương"
-        android:layout_below="@+id/editText6"
-        android:layout_alignLeft="@+id/editText6"
-        android:layout_alignStart="@+id/editText6"
+        android:layout_below="@+id/editEmail"
+        android:layout_alignLeft="@+id/editEmail"
+        android:layout_alignStart="@+id/editEmail"
         android:id="@+id/editLuong" />
     <Button
         android:text="Thêm"
@@ -111,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="64dp"
         android:layout_marginStart="64dp"
-        android:id="@+id/button3"
+        android:id="@+id/btnThem"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -120,12 +120,12 @@
         android:text="Thoát"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button3"
+        android:layout_alignBottom="@+id/btnThem"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="49dp"
         android:layout_marginEnd="49dp"
-        android:id="@+id/button4" />
+        android:id="@+id/btnThoat" />
 
 
 </RelativeLayout>
