@@ -30,6 +30,7 @@ public class NhanVienActivity extends AppCompatActivity {
     Custom_Listview_NhanVien adapter;
     ListView listViewNV;
     int vitri;
+    public  static int RESULT_CAPNHATNHANVIEN = 100;
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
@@ -87,6 +88,21 @@ public class NhanVienActivity extends AppCompatActivity {
             XoaNhanVien();
             LoadListViewNhanVien();
         }
+        if(id == R.id.menuSua){
+            Intent iCapNhatNhanVien = new Intent(NhanVienActivity.this,CapNhatNhanVienActivity.class);
+            int idnhanvien = listNV.get(vitri).getManv();
+            iCapNhatNhanVien.putExtra("manv",idnhanvien);
+            startActivityForResult(iCapNhatNhanVien,RESULT_CAPNHATNHANVIEN);
+        }
         return super.onContextItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(resultCode == RESULT_CAPNHATNHANVIEN && resultCode == RESULT_OK){
+            LoadListViewNhanVien();
+        }
     }
 }

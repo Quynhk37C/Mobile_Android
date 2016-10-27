@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:background="#F0FFFF"
+        android:background="#FFB6C1"
+
         android:layout_height="match_parent">
 
     <TextView
-        android:text="Thiết lập mật khẩu"
+        android:text="THIẾT LẬP MẬT KHẨU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -14,7 +15,7 @@
         android:layout_marginLeft="35dp"
         android:layout_marginStart="35dp"
         android:layout_marginTop="24dp"
-        android:textColor="#CD5C5C"
+        android:textColor="#000000"
         android:textSize="20dp"
         android:id="@+id/tvThietLapMatKhau" />
 
@@ -32,123 +33,136 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/togglebackground"
         android:id="@+id/toggleButton" />
-
-    <TextView
-        android:text="Tên Đăng Nhập"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:id="@+id/textTenDangNhap"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/khungthaydoi"
         android:layout_below="@+id/toggleButton"
-        android:layout_alignLeft="@+id/tvMatKhau"
-        android:layout_alignStart="@+id/tvMatKhau" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Nhập tên đăng nhập"
-        android:ems="10"
-        android:layout_marginLeft="34dp"
-        android:layout_marginStart="34dp"
-        android:id="@+id/edTenDangNhap"
-        android:layout_alignBaseline="@+id/textTenDangNhap"
-        android:layout_alignBottom="@+id/textTenDangNhap"
-        android:layout_toRightOf="@+id/textTenDangNhap"
-        android:layout_toEndOf="@+id/textTenDangNhap" />
+        android:layout_height="match_parent">
+        <TextView
+            android:text="Tên Đăng Nhập"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:id="@+id/textTenDangNhap"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Mật Khẩu"
-        android:id="@+id/tvMatKhau"
-        android:layout_marginLeft="5dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/edMatKhau"
-        android:layout_alignBottom="@+id/edMatKhau"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            android:layout_alignLeft="@+id/tvMatKhau"
+            android:layout_alignStart="@+id/tvMatKhau" />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:inputType="textPersonName"
+            android:background="#ffffff"
+            android:ems="10"
+            android:textColor="#000000"
+            android:layout_marginLeft="34dp"
+            android:layout_marginStart="34dp"
+            android:id="@+id/edTenDangNhap"
+            android:layout_alignBaseline="@+id/textTenDangNhap"
+            android:layout_alignBottom="@+id/textTenDangNhap"
+            android:layout_toRightOf="@+id/textTenDangNhap"
+            android:layout_toEndOf="@+id/textTenDangNhap" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:text="Nhập mật khẩu"
-        android:layout_toRightOf="@+id/tvMatKhau"
-        android:layout_marginLeft="70dp"
-        android:id="@+id/edMatKhau"
-        android:layout_below="@id/edTenDangNhap"
-        android:inputType="textPassword"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Mật Khẩu"
+            android:id="@+id/tvMatKhau"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/edMatKhau"
+            android:layout_alignBottom="@+id/edMatKhau"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:textColor="#000000"
+            android:id="@+id/edMatKhau"
+            android:layout_below="@id/edTenDangNhap"
+            android:inputType="textPassword"
+            android:layout_alignLeft="@+id/edTenDangNhap"
+            android:layout_alignStart="@+id/edTenDangNhap" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Tên Mới"
+            android:layout_marginTop="12dp"
+            android:id="@+id/tvTenDNMoi"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edMatKhau"
+            android:layout_toLeftOf="@+id/edMatKhau"
+            android:layout_alignLeft="@+id/tvMatKhau"
+            android:layout_alignStart="@+id/tvMatKhau" />
+
+        <Button
+            android:text="Lưu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/edMatKhau"
+            android:layout_alignStart="@+id/edMatKhau"
+            android:layout_marginBottom="38dp"
+            android:id="@+id/btnTLLuu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Nhập Lại Mật Khẩu"
+            android:id="@+id/tvNhapLaiMK"
+            android:layout_marginTop="14dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/edNhapLai"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="#ffffff"
+            android:layout_below="@+id/edNhapLai"
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"
+            android:layout_alignLeft="@+id/edTenDNMoi"
+            android:layout_alignStart="@+id/edTenDNMoi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Mật Khẩu Mới"
+            android:id="@+id/tvMatKhauMoi"
+            android:layout_marginTop="24dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edTenDNMoi"
+            android:layout_alignLeft="@+id/tvTenDNMoi"
+            android:layout_alignStart="@+id/tvTenDNMoi" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="30dp"
+            android:background="#ffffff"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:id="@+id/edTenDNMoi"
+            android:layout_below="@+id/edMatKhau"
+            android:layout_toRightOf="@+id/tvTenDNMoi"
+            android:layout_toEndOf="@+id/tvTenDNMoi" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:inputType="textPassword"
+            android:background="#ffffff"
+            android:textColor="#000000"
+            android:id="@+id/edNhapLai"
+            android:layout_alignBaseline="@+id/tvMatKhauMoi"
+            android:layout_alignBottom="@+id/tvMatKhauMoi"
+            android:layout_alignLeft="@+id/edTenDNMoi"
+            android:layout_alignStart="@+id/edTenDNMoi" />
 
 
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Tên Mới"
-        android:layout_marginTop="12dp"
-        android:id="@+id/tvTenDNMoi"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edMatKhau"
-        android:layout_toLeftOf="@+id/edMatKhau"
-        android:layout_alignLeft="@+id/tvMatKhau"
-        android:layout_alignStart="@+id/tvMatKhau" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/edMatKhau"
-        android:layout_alignStart="@+id/edMatKhau"
-        android:layout_marginBottom="38dp"
-        android:id="@+id/button3" />
-
-    <EditText
-        android:text="Nhập tên đăng nhập mói"
-        android:layout_width="wrap_content"
-        android:inputType="textPersonName"
-        android:layout_height="wrap_content"
-        android:id="@+id/edTenDNMoi"
-        android:layout_below="@+id/edMatKhau"
-        android:layout_alignLeft="@+id/edTenDangNhap"
-        android:layout_alignStart="@+id/edTenDangNhap" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Nhập Lại Mật Khẩu"
-        android:id="@+id/tvNhapLaiMK"
-        android:layout_marginTop="14dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_below="@+id/edNhapLai"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:text="Nhập lại mật khẩu"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edNhapLai"
-        android:layout_alignLeft="@+id/edTenDNMoi"
-        android:layout_alignStart="@+id/edTenDNMoi" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:inputType="textPassword"
-        android:text="Nhập mật khẩu mới"
-        android:id="@+id/edNhapLai"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/tvMatKhauMoi"
-        android:layout_alignLeft="@+id/edMatKhau"
-        android:layout_alignStart="@+id/edMatKhau" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Mật Khẩu Mới"
-        android:id="@+id/tvMatKhauMoi"
-        android:layout_marginTop="24dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edTenDNMoi"
-        android:layout_alignLeft="@+id/tvTenDNMoi"
-        android:layout_alignStart="@+id/tvTenDNMoi" />
+    </RelativeLayout>
 
 
 </RelativeLayout>
