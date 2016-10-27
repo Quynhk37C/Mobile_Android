@@ -1,4 +1,7 @@
 package com.hue.husc.it.nhuquynh.quanlynv.Adapter;
+
+
+
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
@@ -6,12 +9,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
 import com.hue.husc.it.nhuquynh.quanlynv.DTO.NhanVienDTO;
 import com.hue.husc.it.nhuquynh.quanlynv.R;
 import java.util.List;
 /**
  * Created by dell on 2016-10-25.
  */
+
+
+import com.hue.husc.it.nhuquynh.quanlynv.DTO.NhanVienDTO;
+import com.hue.husc.it.nhuquynh.quanlynv.R;
+
+import java.util.List;
+
+/**
+ * Created by dell on 2016-10-25.
+ */
+
+
 public class Custom_Listview_NhanVien  extends ArrayAdapter<NhanVienDTO>{
     Context context;
     int resource;
@@ -21,6 +37,7 @@ public class Custom_Listview_NhanVien  extends ArrayAdapter<NhanVienDTO>{
         this.context = context;
         this.resource = resource;
         this.objects = objects;
+
     }
     @NonNull
     @Override

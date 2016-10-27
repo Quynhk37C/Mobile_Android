@@ -14,8 +14,17 @@ public class NhanVienDTO {
     String email;
      int luong;
     String mapb;
+    String tenphongban;
     public NhanVienDTO(){
 
+    }
+
+    public String getTenphongban() {
+        return tenphongban;
+    }
+
+    public void setTenphongban(String tenphongban) {
+        this.tenphongban = tenphongban;
     }
 
     public int getManv() {

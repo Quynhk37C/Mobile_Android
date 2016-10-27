@@ -34,6 +34,13 @@
         <activity android:name=".ThemNhanVienActivity"
             android:label="Thêm nhân viên"
            ></activity>
+
+        <activity android:name=".ThietLapMatKhauActivity"
+            android:label="Thiết lập mật khẩu"></activity>
+        <activity android:name=".ChitietNhanVienActivity"
+            android:label="Chi tiết nhân viên"></activity>
     </application>
+
+
 
 </manifest>

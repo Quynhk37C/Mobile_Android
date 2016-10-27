@@ -21,7 +21,7 @@
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:id="@+id/vGioiTinh"
         android:layout_below="@+id/vTenNhanVien"
         android:layout_alignRight="@+id/vTenNhanVien"
@@ -31,10 +31,11 @@
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="18dp"
         android:id="@+id/vSodienThoai"
         android:layout_below="@+id/vGioiTinh"
-        android:layout_alignRight="@+id/vGioiTinh"
-        android:layout_alignEnd="@+id/vGioiTinh" />
+        android:layout_alignLeft="@+id/vGioiTinh"
+        android:layout_alignStart="@+id/vGioiTinh" />
+
 
 </RelativeLayout>

@@ -33,6 +33,8 @@ public class Custom_Listview_PhongBan extends ArrayAdapter<PhongBanDTO> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater= (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View viewrow =inflater.inflate(R.layout.custom_listview_phongban,parent,false);
+
+
         TextView vTenPhongBan= (TextView) viewrow.findViewById(R.id.ViewListPhongBan);
         TextView vMAPhongBan= (TextView) viewrow.findViewById(R.id.viewlistMaPhongBan);
         TextView vSoNhanVien= (TextView) viewrow.findViewById(R.id.viewlistSoNhanVien);

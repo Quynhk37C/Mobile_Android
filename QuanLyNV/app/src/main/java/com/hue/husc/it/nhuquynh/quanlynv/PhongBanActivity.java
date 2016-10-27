@@ -194,7 +194,8 @@ public class PhongBanActivity extends AppCompatActivity {
             Toast.makeText(getApplication(),item.getTitle(),Toast.LENGTH_LONG).show();
         }
         if(id == R.id.menuHeThong){
-            Toast.makeText(getApplication(),item.getTitle(),Toast.LENGTH_LONG).show();
+            Intent iHeThongAcivity = new Intent(PhongBanActivity.this,ThietLapMatKhauActivity.class);
+            startActivity(iHeThongAcivity);
         }
         return super.onOptionsItemSelected(item);
     }

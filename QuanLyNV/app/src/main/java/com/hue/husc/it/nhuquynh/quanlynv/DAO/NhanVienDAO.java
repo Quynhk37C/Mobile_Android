@@ -23,6 +23,27 @@ public class NhanVienDAO {
         this.context = context;
         dbhelper = new Database(context);
     }
+    public NhanVienDTO LayNhanVienTheoMa(int id){
+        db = dbhelper.getWritableDatabase();
+        String sql="SELECT * FROM "+Database.TABLE_NHANVIEN+ "," +Database.TABLE_PHONGBAN+
+                " where "+ Database.TABLE_NHANVIEN+"."+Database.MaPB_PhongBan+"="
+                +Database.TABLE_PHONGBAN+"."+Database.MaPB_PhongBan +" and "+Database.MaNV_NhanVien +"="+ id;
+        Cursor c=db.rawQuery(sql,null);
+        c.moveToFirst();
+        NhanVienDTO nhanvien=new NhanVienDTO();
+        while (!c.isAfterLast()){
+            nhanvien.setDiachi(c.getString(c.getColumnIndex(Database.DiaChi_NhanVien)));
+            nhanvien.setEmail(c.getString(c.getColumnIndex(Database.Email_NhanVien)));
+            nhanvien.setGioitinh(c.getString(c.getColumnIndex(Database.GioiTinh_NhanVien)));
+            nhanvien.setLuong(Integer.parseInt(c.getString(c.getColumnIndex(Database.Luong_NhanVien))));
+            nhanvien.setNgaysinh(c.getString(c.getColumnIndex(Database.NgaySinh_NhanVien)));
+            nhanvien.setSdt(c.getString(c.getColumnIndex(Database.SDT_NhanVien)));
+            nhanvien.setTennv(c.getString(c.getColumnIndex(Database.TenNV_NhanVien)));
+            nhanvien.setTenphongban(c.getString(c.getColumnIndex(Database.TenPB_PhongBan)));
+            c.moveToNext();
+        }
+        return nhanvien;
+    }
     public void themNhanVien(NhanVienDTO nhanvien){
         db = dbhelper.getWritableDatabase();
         ContentValues values = new ContentValues();

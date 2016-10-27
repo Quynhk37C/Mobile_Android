@@ -41,7 +41,7 @@ public class Database extends SQLiteOpenHelper {
                 "                     NOT NULL,\n" +
                 "    "+TenNV_NhanVien+"    TEXT    NOT NULL,\n" +
                 "    "+SDT_NhanVien+"     TEXT,\n" +
-                "    "+NgaySinh_NhanVien+"    TEXT,\n " +
+                "    "+NgaySinh_NhanVien+"    TEXT,\n" +
                 "    "+GioiTinh_NhanVien+" TEXT    NOT NULL,\n" +
                 "    "+DiaChi_NhanVien+"   TEXT,\n" +
                 "    "+Email_NhanVien+"    TEXT,\n" +

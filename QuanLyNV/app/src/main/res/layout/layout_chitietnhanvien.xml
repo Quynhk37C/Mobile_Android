@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="#F08080"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/background_chitietnhanvien"
+        >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@android:drawable/ic_menu_edit"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/imageView"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp" />
+         <TextView
+            android:text="Tên Nhân Viên"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/vCTTenNhanVien"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView" />
+        <TextView
+            android:text="Số Điện Thoại"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignLeft="@+id/vCTGioiTinh"
+            android:layout_alignStart="@+id/vCTGioiTinh"
+            android:id="@+id/vCTSoDienThoai" />
+        <TextView
+            android:text="Giới Tính"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/vCTGioiTinh" />
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:background="@drawable/background_chitietnhanvien"
+        android:layout_margin="20dp"
+        android:layout_height="fill_parent">
+        <TableRow android:layout_height="fill_parent"
+            android:layout_width="fill_parent">
+            <TextView
+                android:text="Địa Chỉ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textColor="#F08080"
+                android:textStyle="bold"
+                android:id="@+id/VCTDiaChi" />
+            <TextView
+                android:text="Hiển thị địa chỉ"
+                android:id="@+id/VHTDiachi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:background="@drawable/line"
+            android:layout_width="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:padding="2dp"
+                />
+        </TableRow>
+
+        <TableRow android:layout_height="fill_parent"
+            android:layout_width="fill_parent">
+            <TextView
+                android:text="Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textColor="#F08080"
+                android:textStyle="bold"
+                android:id="@+id/CTEmail" />
+            <TextView
+                android:text="Hiển thị email"
+                android:id="@+id/VHTEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:background="@drawable/line"
+            android:layout_width="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:padding="2dp"
+                />
+        </TableRow>
+
+        <TableRow android:layout_height="fill_parent"
+            android:layout_width="fill_parent">
+            <TextView
+                android:text="Ngày Sinh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textColor="#F08080"
+                android:textStyle="bold"
+                android:id="@+id/VCTNgaySinh" />
+            <TextView
+                android:text="Hiển thị ngày sinh"
+                android:id="@+id/VHTNgaySinh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:background="@drawable/line"
+            android:layout_width="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:padding="2dp"
+                />
+        </TableRow>
+
+        <TableRow android:layout_height="fill_parent"
+            android:layout_width="fill_parent">
+            <TextView
+                android:text="Lương"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textColor="#F08080"
+                android:textStyle="bold"
+                android:id="@+id/VCTLuong" />
+            <TextView
+                android:text="Hiển thị lương"
+                android:id="@+id/VHTLuong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:background="@drawable/line"
+            android:layout_width="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:padding="2dp"
+                />
+        </TableRow>
+
+        <TableRow android:layout_height="fill_parent"
+            android:layout_width="fill_parent">
+            <TextView
+                android:text="Phòng Ban"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textColor="#F08080"
+                android:textStyle="bold"
+                android:id="@+id/VCTPhongBan" />
+            <TextView
+                android:text="Hiển thị Phòng Ban"
+                android:id="@+id/VHTPhongBan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:background="@drawable/line"
+            android:layout_width="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:padding="2dp"
+                />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

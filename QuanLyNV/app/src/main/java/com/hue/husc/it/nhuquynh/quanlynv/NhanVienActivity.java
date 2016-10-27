@@ -18,12 +18,27 @@ import java.util.List;
 /**
  * Created by dell on 2016-10-25.
  */
+
+import com.hue.husc.it.nhuquynh.quanlynv.Adapter.Custom_Listview_NhanVien;
+import com.hue.husc.it.nhuquynh.quanlynv.DAO.NhanVienDAO;
+import com.hue.husc.it.nhuquynh.quanlynv.DTO.NhanVienDTO;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+/**
+ * Created by dell on 2016-10-25.
+ */
+
+
 public class NhanVienActivity extends AppCompatActivity {
     NhanVienDAO dbNhanVien;
     List<NhanVienDTO> listNV;
     Custom_Listview_NhanVien adapter;
     ListView listViewNV;
     int vitri;
+    int idnhanvien;
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
@@ -34,11 +49,25 @@ public class NhanVienActivity extends AppCompatActivity {
         listNV = new ArrayList<NhanVienDTO>();
         LoadListViewNhanVien();
         registerForContextMenu(listViewNV);
+
+        LoadListViewNhanVien();
+
+        registerForContextMenu(listViewNV);
+
         listViewNV.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 vitri = position;
                 return false;
+            }
+        });
+        listViewNV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent ichitietnhanvien=new Intent(NhanVienActivity.this,ChitietNhanVienActivity.class);
+                int id=listNV.get(i).getManv();
+                ichitietnhanvien.putExtra("manv",id);
+                startActivity(ichitietnhanvien);
             }
         });
     }
@@ -60,8 +89,8 @@ public class NhanVienActivity extends AppCompatActivity {
         }
     }
     private  void XoaNhanVien(){
-        int idnhanvien = listNV.get(vitri).getManv();
-        if(dbNhanVien.Xoa(idnhanvien) != -1){
+         idnhanvien=listNV.get(vitri).getManv();
+        if(dbNhanVien.Xoa(idnhanvien)!=1){
             Toast.makeText(getApplicationContext(),"Xóa thành công",Toast.LENGTH_LONG).show();
         }else{
             Toast.makeText(getApplicationContext(),"Xóa thất bại",Toast.LENGTH_LONG).show();
@@ -75,8 +104,9 @@ public class NhanVienActivity extends AppCompatActivity {
             startActivity(iThemNhanVien);
         }
         if(id == R.id.menuXoa){
-            // XoaNhanVien();
-            // LoadListViewNhanVien();
+
+            XoaNhanVien();
+            LoadListViewNhanVien();
         }
         return super.onContextItemSelected(item);
     }
