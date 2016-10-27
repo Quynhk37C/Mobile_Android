@@ -23,6 +23,10 @@ public class NhanVienDAO {
         this.context = context;
         dbhelper = new Database(context);
     }
+    public int Xoa(int id){
+        db = dbhelper.getWritableDatabase();
+        return db.delete(Database.TABLE_NHANVIEN,Database.MaNV_NhanVien + "=?", new String[]{String.valueOf(id)});
+    }
     public void themNhanVien(NhanVienDTO nhanvien){
         db = dbhelper.getWritableDatabase();
         ContentValues values = new ContentValues();

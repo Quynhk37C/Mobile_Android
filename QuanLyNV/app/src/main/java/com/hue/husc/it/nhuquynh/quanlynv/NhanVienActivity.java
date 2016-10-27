@@ -3,38 +3,89 @@ package com.hue.husc.it.nhuquynh.quanlynv;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.hue.husc.it.nhuquynh.quanlynv.Adapter.Custom_Listview_NhanVien;
+import com.hue.husc.it.nhuquynh.quanlynv.DAO.NhanVienDAO;
+import com.hue.husc.it.nhuquynh.quanlynv.DTO.NhanVienDTO;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Created by dell on 2016-10-25.
  */
 
-public class NhanVienActivity extends Activity{
+public class NhanVienActivity extends AppCompatActivity {
+    NhanVienDAO dbNhanVien;
+    List<NhanVienDTO> listNV;
+    Custom_Listview_NhanVien adapter;
+    ListView listViewNV;
+    int vitri;
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         setContentView(R.layout.layout_nhanvien);
         LinearLayout layout_nhanvien= (LinearLayout) findViewById(R.id.layout_nhanvien);
         registerForContextMenu(layout_nhanvien);
+        dbNhanVien = new NhanVienDAO(this);
+        listNV = new ArrayList<NhanVienDTO>();
 
+        LoadListViewNhanVien();
+
+        registerForContextMenu(listViewNV);
+
+        listViewNV.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                vitri = position;
+                return false;
+            }
+        });
     }
-
+    private  void LoadListViewNhanVien(){
+        listNV = dbNhanVien.LoadAllNhanvien();
+        adapter = new Custom_Listview_NhanVien(this,R.layout.custom_layout_nhanvien,listNV);
+        listViewNV = (ListView)findViewById(R.id.listNhanVien);
+        listViewNV.setAdapter(adapter);
+    }
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
         getMenuInflater().inflate(R.menu.menu_chucnang,menu);
-    }
 
+        if(v.getId() == R.id.listNhanVien){
+            menu.getItem(0).setVisible(false);
+            menu.getItem(1).setVisible(false);
+            menu.getItem(2).setVisible(false);
+        }
+    }
+    private  void XoaNhanVien(){
+        int idnhanvien = listNV.get(vitri).getManv();
+        if(dbNhanVien.Xoa(idnhanvien) != -1){
+            Toast.makeText(getApplicationContext(),"Xóa thành công",Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(getApplicationContext(),"Xóa thất bại",Toast.LENGTH_LONG).show();
+        }
+    }
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         int id=item.getItemId();
         if(id==R.id.menuThem){
             Intent iThemNhanVien=new Intent(NhanVienActivity.this,ThemNhanVienActivity.class);
             startActivity(iThemNhanVien);
+        }
+        if(id == R.id.menuXoa){
+            XoaNhanVien();
+            LoadListViewNhanVien();
         }
         return super.onContextItemSelected(item);
     }

@@ -32,8 +32,11 @@
 
         </activity>
         <activity android:name=".ThemNhanVienActivity"
-            android:label="Thêm nhân viên"
-            android:parentActivityName=".NhanVienActivity"></activity>
+            android:label="Thêm nhân viên"></activity>
+
+        <activity android:name=".ThietLapMatKhauActivity"
+            android:label="Thiết lập mật khẩu"></activity>
     </application>
+
 
 </manifest>
