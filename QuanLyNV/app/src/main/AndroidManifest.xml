@@ -39,6 +39,9 @@
             android:label="Thiết lập mật khẩu"></activity>
         <activity android:name=".ChitietNhanVienActivity"
             android:label="Chi tiết nhân viên"></activity>
+
+        <activity android:name=".CapNhatNhanVienActivity"
+            android:label="Cập nhật nhân viên"></activity>7
     </application>
 
 

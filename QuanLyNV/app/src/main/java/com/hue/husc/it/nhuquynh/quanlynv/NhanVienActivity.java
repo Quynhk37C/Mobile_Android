@@ -19,14 +19,6 @@ import java.util.List;
  * Created by dell on 2016-10-25.
  */
 
-import com.hue.husc.it.nhuquynh.quanlynv.Adapter.Custom_Listview_NhanVien;
-import com.hue.husc.it.nhuquynh.quanlynv.DAO.NhanVienDAO;
-import com.hue.husc.it.nhuquynh.quanlynv.DTO.NhanVienDTO;
-
-import java.util.ArrayList;
-import java.util.List;
-
-
 /**
  * Created by dell on 2016-10-25.
  */
@@ -39,6 +31,8 @@ public class NhanVienActivity extends AppCompatActivity {
     ListView listViewNV;
     int vitri;
     int idnhanvien;
+    public  static int RESULT_CAPNHATNHANVIEN = 100;
+
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
@@ -108,6 +102,21 @@ public class NhanVienActivity extends AppCompatActivity {
             XoaNhanVien();
             LoadListViewNhanVien();
         }
+        if(id == R.id.menuSua){
+            Intent iCapNhatNhanVien = new Intent(NhanVienActivity.this,CapNhatNhanVienActivity.class);
+            int idnhanvien = listNV.get(vitri).getManv();
+            iCapNhatNhanVien.putExtra("manv",idnhanvien);
+            startActivityForResult(iCapNhatNhanVien,RESULT_CAPNHATNHANVIEN);
+        }
         return super.onContextItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(resultCode == RESULT_CAPNHATNHANVIEN && resultCode == RESULT_OK){
+            LoadListViewNhanVien();
+        }
     }
 }
