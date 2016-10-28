@@ -98,6 +98,7 @@ public class CapNhatNhanVienActivity extends AppCompatActivity {
         nhanvien.setDiachi(txtDiaChi.getText().toString());
         nhanvien.setEmail(txtEmail.getText().toString());
         nhanvien.setSdt(txtSdt.getText().toString());
+        nhanvien.setNgaysinh(txtNgaySinh.getText().toString());
         nhanvien.setGioitinh(gioiTinh);
         nhanvien.setLuong(Integer.parseInt(txtLuong.getText().toString()));
         nhanvien.setMapb(String.valueOf(maPB));

@@ -30,7 +30,7 @@ public class ChitietNhanVienActivity extends AppCompatActivity {
         vDiaChi = (TextView) findViewById(R.id.VHTDiachi);
         vPhongBan= (TextView) findViewById(R.id.VHTPhongBan);
         vLuong= (TextView) findViewById(R.id.VHTLuong);
-      //  vNgaysinh= (TextView) findViewById(R.id.VHTNgaySinh);
+        vNgaysinh= (TextView) findViewById(R.id.VHTNgaySinh);
         dbnhanvien =new NhanVienDAO(this);
         int id=getIntent().getExtras().getInt("manv");
         NhanVienDTO nhanvien=new NhanVienDTO();
@@ -43,6 +43,6 @@ public class ChitietNhanVienActivity extends AppCompatActivity {
         vDiaChi.setText(nhanvien.getDiachi().toString());
         vPhongBan.setText(nhanvien.getTenphongban().toString());
         vLuong.setText(String.valueOf(nhanvien.getLuong()));
-      //  vNgaysinh.setText(nhanvien.getNgaysinh().toString()); cai nay them vao csdl
+        vNgaysinh.setText(nhanvien.getNgaysinh().toString());
     }
 }

@@ -75,6 +75,7 @@ public class ThemNhanVienActivity extends AppCompatActivity {
                     nhanVienDTO.setGioitinh(gioiTinh);
                     nhanVienDTO.setLuong(Integer.parseInt(txtLuong.getText().toString()));
                     nhanVienDTO.setMapb(String.valueOf(maPB));
+                    nhanVienDTO.setNgaysinh(txtNgaySinh.getText().toString());
                     dbNhanVien.themNhanVien(nhanVienDTO);
                     Toast.makeText(getApplicationContext(),"Thêm thành công",Toast.LENGTH_LONG).show();
                     finish();

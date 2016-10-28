@@ -19,20 +19,20 @@ public class NhanVienDTO {
 
     }
 
-    public String getTenphongban() {
-        return tenphongban;
-    }
-
-    public void setTenphongban(String tenphongban) {
-        this.tenphongban = tenphongban;
-    }
-
     public int getManv() {
         return manv;
     }
 
     public void setManv(int manv) {
         this.manv = manv;
+    }
+
+    public String getTenphongban() {
+        return tenphongban;
+    }
+
+    public void setTenphongban(String tenphongban) {
+        this.tenphongban = tenphongban;
     }
 
     public String getTennv() {
