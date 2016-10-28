@@ -31,7 +31,7 @@ public class ThietLapMatKhauActivity extends AppCompatActivity {
         editTenDangNhap = (EditText)findViewById(R.id.edTenDangNhap);
         editMatKhau = (EditText)findViewById(R.id.edMatKhau);
         editMatKhauMoi = (EditText)findViewById(R.id.edNhapLai);
-        editNhapLaiMatKhau = (EditText)findViewById(R.id.editNhapLaiMK);
+        editNhapLaiMatKhau = (EditText)findViewById(R.id.edNhapMatKhauMoi);
         editTenDangNhapMoi = (EditText)findViewById(R.id.edTenDNMoi);
         toggleTrangThai = (ToggleButton)findViewById(R.id.toggleButton);
         sharedPreferences = getSharedPreferences("config",0);
