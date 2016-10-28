@@ -26,9 +26,9 @@ public class NhanVienDAO {
     }
     public NhanVienDTO LayNhanVienTheoMa(int id){
         db = dbhelper.getWritableDatabase();
-        String sql="select * from "+Database.TABLE_NHANVIEN+","+Database.TABLE_PHONGBAN+
-                " where "+ Database.TABLE_NHANVIEN+ "." +Database.MaPB_PhongBan+ " = "
-                +Database.TABLE_PHONGBAN+"."+Database.MaPB_PhongBan +" and "+Database.MaNV_NhanVien +" = "+ id;
+        String sql=" select * from "+ Database.TABLE_NHANVIEN + "," +Database.TABLE_PHONGBAN+
+                " where " + Database.TABLE_NHANVIEN + "." +Database.MaPB_PhongBan+ " = "
+                + Database.TABLE_PHONGBAN+ "." +Database.MaPB_PhongBan + " and " +Database.MaNV_NhanVien + " = "+ id;
         Cursor c=db.rawQuery(sql,null);
         c.moveToFirst();
         NhanVienDTO nhanvien=new NhanVienDTO();
@@ -39,6 +39,7 @@ public class NhanVienDAO {
             nhanvien.setLuong(Integer.parseInt(c.getString(c.getColumnIndex(Database.Luong_NhanVien))));
             nhanvien.setNgaysinh(c.getString(c.getColumnIndex(Database.NgaySinh_NhanVien)));
             nhanvien.setSdt(c.getString(c.getColumnIndex(Database.SDT_NhanVien)));
+            nhanvien.setTenphongban(c.getString(c.getColumnIndex(Database.TenPB_PhongBan)));
             nhanvien.setTennv(c.getString(c.getColumnIndex(Database.TenNV_NhanVien)));
             c.moveToNext();
         }
@@ -101,9 +102,9 @@ public class NhanVienDAO {
     public List<NhanVienDTO> layNhanVienTheoPhong(int mapb){
         List<NhanVienDTO> list = new ArrayList<NhanVienDTO>();
         db = dbhelper.getWritableDatabase();
-        String sql="select * from "+Database.TABLE_NHANVIEN+","+Database.TABLE_PHONGBAN+
-                " where "+ Database.TABLE_NHANVIEN+ "." +Database.MaPB_PhongBan+ " = "
-                +Database.TABLE_PHONGBAN+"."+Database.MaPB_PhongBan +" and "+ Database.TABLE_NHANVIEN+ "." +Database.MaPB_PhongBan+" = "+ mapb;
+        String sql=" select * from "+ Database.TABLE_NHANVIEN+","+ Database.TABLE_PHONGBAN+
+                " where "+ Database.TABLE_NHANVIEN + "." + Database.MaPB_PhongBan + " = "
+                +Database.TABLE_PHONGBAN + "." + Database.MaPB_PhongBan + " and " + Database.TABLE_NHANVIEN + "."+ Database.MaPB_PhongBan +" = " + mapb;
         Cursor c=db.rawQuery(sql,null);
         c.moveToFirst();
         NhanVienDTO nhanvien=new NhanVienDTO();

@@ -23,7 +23,7 @@ public class ChitietNhanVienActivity extends AppCompatActivity {
 
         setContentView(R.layout.layout_chitietnhanvien);
 
-        vTenNV= (TextView) findViewById(R.id.vCTTenNhanVien);
+       vTenNV= (TextView) findViewById(R.id.vCTTenNhanVien);
         vGioitinh= (TextView) findViewById(R.id.vCTGioiTinh);
         vEmail= (TextView) findViewById(R.id.VHTEmail);
         vSoDienThoai= (TextView) findViewById(R.id.vCTSoDienThoai);
