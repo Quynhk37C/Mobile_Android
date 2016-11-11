@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -17,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     Button btnDangKy,btnThoatDK,btnDangNhap,btnThoatDN;
     EditText editTaiKhoanDK,editMatKhauDK,editNhapLaiMk,editMatKhauDN,editTaiKhoanDN;
+    CheckBox saveLoginCheckBox;
+    private Boolean saveLogin;
+    String taikhoandn,matkhaudn;
+    SharedPreferences share;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("config", Context.MODE_PRIVATE);
         editTaiKhoanDN = (EditText)findViewById(R.id.editTenDangNhap);
         editMatKhauDN = (EditText)findViewById(R.id.editMatKhau);
+        saveLoginCheckBox = (CheckBox)findViewById(R.id.saveLoginCheckBox);
+        share = getSharedPreferences("auth", 0);
+        if(share.getBoolean("auth_status", false)){  // the false stands for default value
+            editTaiKhoanDN.setText(share.getString("auth_name", "elltz")); //default vaule is elltz
+            editMatKhauDN.setText(share.getString("auth_pass", "elltz")); //default vaule is elltz
+        }
+
 
     }
 
@@ -34,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
         matkhauconfig = sharedPreferences.getString("MatKhau","");
         taikhoandn = editTaiKhoanDN.getText().toString();
         matkhaudn = editMatKhauDN.getText().toString();
+        SharedPreferences.Editor e = share.edit();
+        e.putString("auth_name", editTaiKhoanDN.getText().toString());
+        e.putString("auth_pass", editMatKhauDN .getText().toString());
+        e.putBoolean("auth_status", saveLoginCheckBox.isChecked());
+        e.commit();
 
         if(taikhoandn.equals(taikhoanconfig) && matkhaudn.equals(matkhauconfig)){
             Toast.makeText(getApplication(),"Đăng nhập thành công",Toast.LENGTH_LONG).show();
@@ -77,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
                         matkhaudk = editMatKhauDK.getText().toString();
                         nhaplaimatkhaudk = editNhapLaiMk.getText().toString();
 
+
                         if(!matkhaudk.equals(nhaplaimatkhaudk)){
                             Toast.makeText(getApplication(),"Mật khẩu nhập lại không đúng",Toast.LENGTH_LONG).show();
                         }else{
@@ -85,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                             editor.putString("MatKhau",editMatKhauDK.getText().toString());
                             editor.commit();
                             Toast.makeText(getApplication(),"Đăng ký thành công",Toast.LENGTH_LONG).show();
-                            // chưa intent mẹ
+
                         }
                     }
                 });
