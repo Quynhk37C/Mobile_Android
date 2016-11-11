@@ -20,7 +20,7 @@ public class Database extends SQLiteOpenHelper {
     public static String DiaChi_NhanVien = "DiaChi";
     public static String Email_NhanVien = "Email";
     public static String Luong_NhanVien = "Luong";
-    public  static String NgaySinh_NhanVien="NgaySinh";
+    public  static String NgaySinh_NhanVien="Ngaysinh";
     public static String TABLE_PHONGBAN = "PhongBan";
     public static String MaPB_PhongBan = "MaPB";
     public static String TenPB_PhongBan  = "TenPB";
@@ -59,7 +59,39 @@ public class Database extends SQLiteOpenHelper {
                 ");";
 
         db.execSQL(taoBangPhongBan);
+        db.execSQL("INSERT INTO PhongBan (\n" +
+                "                        MaPB,\n" +
+                "                        TenPB\n" +
+                "                    )\n" +
+                "                    VALUES (\n" +
+                "                        1,\n" +
+                "                        'Cong nghe thong tin'\n" +
+                "                    );\n");
         db.execSQL(taoBangNhanVien);
+        db.execSQL("INSERT INTO NhanVien (\n" +
+                "                        MaNV,\n" +
+                "                        TenNV,\n" +
+                "                        SoDT,\n" +
+                "                        GioiTinh,\n" +
+                "                       DiaChi,\n" +
+                "                        Email,\n" +
+                "                      Luong,\n" +
+                "                       Ngaysinh,\n" +
+                "                        MaPB\n" +
+                "                    )\n" +
+                "                    VALUES (\n" +
+                "                        4,\n" +
+                "                        'Nguyen Thi Thanh',\n" +
+                "                        '01633968489',\n" +
+                "                        'Nu',\n" +
+                "                        'Hue',\n" +
+                "                        'thanhnguyenthi@gmail.com',\n" +
+                "                        300000,\n" +
+                "                        '20-4-1995',\n" +
+                "                        1\n" +
+                "                    );\n");
+
+
     }
 
     @Override
