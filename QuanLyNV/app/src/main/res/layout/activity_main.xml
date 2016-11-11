@@ -68,6 +68,7 @@
             android:layout_height="wrap_content"
             android:text="@string/thoat"
             android:id="@+id/button2"
+            android:onClick="exitAction"
 
             android:layout_gravity="center" />
 

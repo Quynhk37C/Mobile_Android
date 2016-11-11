@@ -40,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    public void exitAction(View v){
+        finish();
+    }
 
     public void DangNhap(View v){
         String matkhauconfig, taikhoanconfig, taikhoandn, matkhaudn;
