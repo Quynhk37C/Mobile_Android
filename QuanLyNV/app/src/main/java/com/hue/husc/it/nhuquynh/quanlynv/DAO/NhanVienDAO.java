@@ -107,8 +107,8 @@ public class NhanVienDAO {
                 +Database.TABLE_PHONGBAN + "." + Database.MaPB_PhongBan + " and " + Database.TABLE_NHANVIEN + "."+ Database.MaPB_PhongBan +" = " + mapb;
         Cursor c=db.rawQuery(sql,null);
         c.moveToFirst();
-        NhanVienDTO nhanvien=new NhanVienDTO();
         while (!c.isAfterLast()){
+            NhanVienDTO nhanvien=new NhanVienDTO();
             nhanvien.setDiachi(c.getString(c.getColumnIndex(Database.DiaChi_NhanVien)));
             nhanvien.setEmail(c.getString(c.getColumnIndex(Database.Email_NhanVien)));
             nhanvien.setGioitinh(c.getString(c.getColumnIndex(Database.GioiTinh_NhanVien)));
