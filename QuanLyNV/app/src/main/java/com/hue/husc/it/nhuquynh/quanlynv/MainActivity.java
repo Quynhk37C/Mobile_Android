@@ -89,13 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 editMatKhauDK = (EditText)dialog.findViewById(R.id.editMatKhau);
                 editNhapLaiMk = (EditText)dialog.findViewById(R.id.editNhapLaiMK);
                 editTaiKhoanDK = (EditText)dialog.findViewById(R.id.editTaiKhoanDK);
-                btnThoatDN = (Button)dialog.findViewById(R.id.button2);
-                btnThoatDN.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        finish();
-                    }
-                });
+
                 btnDangKy.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -115,6 +109,13 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(getApplication(),"Đăng ký thành công",Toast.LENGTH_LONG).show();
 
                         }
+                    }
+                });
+                btnThoatDK = (Button)dialog.findViewById(R.id.btnThoat);
+                btnThoatDK.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
                     }
                 });
                 dialog.show();
