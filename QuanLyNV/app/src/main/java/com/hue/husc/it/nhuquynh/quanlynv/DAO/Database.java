@@ -65,53 +65,23 @@ public class Database extends SQLiteOpenHelper {
                 "                        1,\n" +
                 "                        'Công nghệ thông tin'\n" +
                 "                    );\n");
+        db.execSQL("INSERT INTO PhongBan (\n" +
+                "                        MaPB,\n" +
+                "                        TenPB\n" +
+                "                    )\n" +
+                "                    VALUES (\n" +
+                "                        2,\n" +
+                "                        'Khoa toán'\n" +
+                "                    );\n");
+        db.execSQL("INSERT INTO PhongBan (\n" +
+                "                        MaPB,\n" +
+                "                        TenPB\n" +
+                "                    )\n" +
+                "                    VALUES (\n" +
+                "                        3,\n" +
+                "                        'Khoa lý'\n" +
+                "                    );\n");
         db.execSQL(taoBangNhanVien);
-<<<<<<< HEAD
-        /*db.execSQL("INSERT INTO PhongBan (\n" +
-                "                         TenPB,\n" +
-                "                         MaPB\n" +
-                "                     )\n" +
-                "                     VALUES (\n" +
-                "                         'Điện Tử Viễn Thông',\n" +
-                "                         1\n" +
-                "                     ),\n" +
-                "                     (\n" +
-                "                         'Toán',\n" +
-                "                         2\n" +
-                "                     ),\n" +
-                "                     (\n" +
-                "                         'Công nghệ thông tin',\n" +
-                "                         3\n" +
-                "                     );\n");
-        db.execSQL("INSERT INTO NhanVien (\n" +
-                "                         Luong,\n" +
-                "                         Email,\n" +
-                "                         DiaChi,\n" +
-                "                         GioiTinh,\n" +
-                "                         SoDT,\n" +
-                "                         TenNV,\n" +
-                "                         MaNV\n" +
-                "                     )\n" +
-                "                     VALUES (\n" +
-                "                         NULL,\n" +
-                "                         'a@gmail.com',\n" +
-                "                         'Quảng Bình',\n" +
-                "                         'Nữ',\n" +
-                "                         12345678,\n" +
-                "                         'Trần Nữ Như Quỳnh',\n" +
-                "                         1\n" +
-                "                     ),\n" +
-                "                     (\n" +
-                "                         NULL,\n" +
-                "                         'b@gmail.com',\n" +
-                "                         'Huế',\n" +
-                "                         'Nam',\n" +
-                "                         12345678,\n" +
-                "                         'Nguyễn Thị Lan',\n" +
-                "                         2\n" +
-                "                     );\n");
-    */
-=======
         db.execSQL("INSERT INTO NhanVien (\n" +
                 "                        MaNV,\n" +
                 "                        TenNV,\n" +
@@ -130,7 +100,7 @@ public class Database extends SQLiteOpenHelper {
                 "                        'Nữ',\n" +
                 "                        'Huế',\n" +
                 "                        'thanhnguyenthi@gmail.com',\n" +
-                "                        300000,\n" +
+                "                        3000000,\n" +
                 "                        '20-4-1995',\n" +
                 "                        1\n" +
                 "                    );\n");
@@ -152,13 +122,99 @@ public class Database extends SQLiteOpenHelper {
                 "                        'Nữ',\n" +
                 "                        'Huế',\n" +
                 "                        'trnnq@gmail.com',\n" +
-                "                        300000,\n" +
+                "                        3000000,\n" +
                 "                        '20-5-1995',\n" +
                 "                        1\n" +
                 "                    );\n");
+        db.execSQL("INSERT INTO NhanVien (\n" +
+                "                        MaNV,\n" +
+                "                        TenNV,\n" +
+                "                        SoDT,\n" +
+                "                        GioiTinh,\n" +
+                "                       DiaChi,\n" +
+                "                        Email,\n" +
+                "                      Luong,\n" +
+                "                       Ngaysinh,\n" +
+                "                        MaPB\n" +
+                "                    )\n" +
+                "                    VALUES (\n" +
+                "                        6,\n" +
+                "                        'Lê Văn Lưu',\n" +
+                "                        '01633968489',\n" +
+                "                        'Nam',\n" +
+                "                        'Huế',\n" +
+                "                        'trnnq@gmail.com',\n" +
+                "                        3000000,\n" +
+                "                        '10-5-1995',\n" +
+                "                        1\n" +
+                "                    );\n");
+        db.execSQL("INSERT INTO NhanVien (\n" +
+                "                        MaNV,\n" +
+                "                        TenNV,\n" +
+                "                        SoDT,\n" +
+                "                        GioiTinh,\n" +
+                "                       DiaChi,\n" +
+                "                        Email,\n" +
+                "                      Luong,\n" +
+                "                       Ngaysinh,\n" +
+                "                        MaPB\n" +
+                "                    )\n" +
+                "                    VALUES (\n" +
+                "                        7,\n" +
+                "                        'Hồ Văn Anh',\n" +
+                "                        '0163396848',\n" +
+                "                        'Nam',\n" +
+                "                        'Huế',\n" +
+                "                        'trnnq@gmail.com',\n" +
+                "                        3000000,\n" +
+                "                        '10-5-1899',\n" +
+                "                        2\n" +
+                "                    );\n");
+        db.execSQL("INSERT INTO NhanVien (\n" +
+                "                        MaNV,\n" +
+                "                        TenNV,\n" +
+                "                        SoDT,\n" +
+                "                        GioiTinh,\n" +
+                "                       DiaChi,\n" +
+                "                        Email,\n" +
+                "                      Luong,\n" +
+                "                       Ngaysinh,\n" +
+                "                        MaPB\n" +
+                "                    )\n" +
+                "                    VALUES (\n" +
+                "                        8,\n" +
+                "                        'Hồ Văn Anh',\n" +
+                "                        '0163396848',\n" +
+                "                        'Nam',\n" +
+                "                        'Huế',\n" +
+                "                        'trnnq@gmail.com',\n" +
+                "                        3000000,\n" +
+                "                        '10-5-1899',\n" +
+                "                        2\n" +
+                "                    );\n");
+        db.execSQL("INSERT INTO NhanVien (\n" +
+                "                        MaNV,\n" +
+                "                        TenNV,\n" +
+                "                        SoDT,\n" +
+                "                        GioiTinh,\n" +
+                "                       DiaChi,\n" +
+                "                        Email,\n" +
+                "                      Luong,\n" +
+                "                       Ngaysinh,\n" +
+                "                        MaPB\n" +
+                "                    )\n" +
+                "                    VALUES (\n" +
+                "                        9,\n" +
+                "                        'Nguyên Vĩnh',\n" +
+                "                        '01219166501',\n" +
+                "                        'Nam',\n" +
+                "                        'Thanh Hóa',\n" +
+                "                        'nguyenvinh@gmail.com',\n" +
+                "                        5000000,\n" +
+                "                        '10-5-1899',\n" +
+                "                        3\n" +
+                "                    );\n");
 
-
->>>>>>> f8adcdc7edad66d985116ddb75e7dd8aa7fe6704
     }
 
     @Override

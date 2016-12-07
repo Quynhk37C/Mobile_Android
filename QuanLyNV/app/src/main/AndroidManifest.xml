@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".NhanVienActivity"
             android:label="Danh sách nhân viên"
+            android:windowSoftInputMode="stateHidden"
     ></activity>
         <activity android:name=".NhanVienPhongBanActivity"
             android:label="Danh Sách Nhân Viên"

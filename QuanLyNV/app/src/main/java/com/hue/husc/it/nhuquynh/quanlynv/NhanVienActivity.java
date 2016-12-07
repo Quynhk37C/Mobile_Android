@@ -3,14 +3,18 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.hue.husc.it.nhuquynh.quanlynv.Adapter.Custom_Listview_NhanVien;
+import com.hue.husc.it.nhuquynh.quanlynv.DAO.Database;
 import com.hue.husc.it.nhuquynh.quanlynv.DAO.NhanVienDAO;
 import com.hue.husc.it.nhuquynh.quanlynv.DTO.NhanVienDTO;
 import java.util.ArrayList;
@@ -31,22 +35,44 @@ public class    NhanVienActivity extends AppCompatActivity {
     ListView listViewNV;
     int vitri;
     int idnhanvien;
+    EditText inputSearch;
     public  static int RESULT_CAPNHATNHANVIEN = 100;
 
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         setContentView(R.layout.layout_nhanvien);
-        LinearLayout layout_nhanvien= (LinearLayout) findViewById(R.id.layout_nhanvien);
+        final LinearLayout layout_nhanvien= (LinearLayout) findViewById(R.id.layout_nhanvien);
         registerForContextMenu(layout_nhanvien);
         dbNhanVien = new NhanVienDAO(this);
         listNV = new ArrayList<NhanVienDTO>();
+        listNV = dbNhanVien.LoadAllNhanvien();
         LoadListViewNhanVien();
         registerForContextMenu(listViewNV);
-
+        inputSearch = (EditText) findViewById(R.id.inputSearch);
         LoadListViewNhanVien();
 
         registerForContextMenu(listViewNV);
+        inputSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+              //  NhanVienActivity.this.adapter.getFilter().filter(charSequence);
+                listNV=dbNhanVien.LoadNhanvien(charSequence.toString());
+                LoadListViewNhanVien();
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        } );
 
         listViewNV.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -65,10 +91,11 @@ public class    NhanVienActivity extends AppCompatActivity {
             }
         });
     }
+
     private  void LoadListViewNhanVien(){
-        listNV = new ArrayList<NhanVienDTO>();
-        listNV = dbNhanVien.LoadAllNhanvien();
+
         adapter = new Custom_Listview_NhanVien(this,R.layout.custom_layout_nhanvien,listNV);
+
         listViewNV = (ListView)findViewById(R.id.listNhanVien);
         listViewNV.setAdapter(adapter);
     }
