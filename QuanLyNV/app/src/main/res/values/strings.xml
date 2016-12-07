@@ -13,4 +13,5 @@
     <string name="menuitemphongban">Phòng Ban</string>
     <string name="menuitemthethong">Hệ Thống</string>
     <string name="menuitemtlienhe">Liên Hệ</string>
+    <string name="title_activity_lien_he">LienHeActivity</string>
 </resources>

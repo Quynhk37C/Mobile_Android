@@ -25,6 +25,8 @@ import com.hue.husc.it.nhuquynh.quanlynv.DTO.PhongBanDTO;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.content.pm.ActivityInfo.UIOPTION_SPLIT_ACTION_BAR_WHEN_NARROW;
+
 /**
  * Created by Admin on 10/20/2016.
  */
@@ -193,7 +195,8 @@ public class PhongBanActivity extends AppCompatActivity {
 
         }
         if(id == R.id.menuLienHe){
-            Toast.makeText(getApplication(),item.getTitle(),Toast.LENGTH_LONG).show();
+            Intent iLienHe = new Intent(PhongBanActivity.this,LienHeActivity.class);
+            startActivity(iLienHe);
         }
         if(id == R.id.menuHeThong){
             Intent iHeThongAcivity = new Intent(PhongBanActivity.this,ThietLapMatKhauActivity.class);

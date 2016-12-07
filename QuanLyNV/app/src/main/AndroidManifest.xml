@@ -4,12 +4,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon_nv"
         android:label="@string/app_name"
-
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,8 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PhongBanActivity"
+        <activity
+            android:name=".PhongBanActivity"
             android:label="Phòng Ban"
+<<<<<<< HEAD
             android:uiOptions="splitActionBarWhenNarrow">
 
         </activity>
@@ -27,24 +29,37 @@
             android:windowSoftInputMode="stateHidden"
     ></activity>
         <activity android:name=".NhanVienPhongBanActivity"
+=======
+            android:uiOptions="splitActionBarWhenNarrow"></activity>
+        <activity
+            android:name=".NhanVienActivity"
+            android:label="Danh sách nhân viên" />
+        <activity
+            android:name=".NhanVienPhongBanActivity"
+>>>>>>> e13ea8d2883cd8b62d097b1604a07bb0e42ec479
             android:label="Danh Sách Nhân Viên"
             android:uiOptions="splitActionBarWhenNarrow">
-
-
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
         </activity>
-        <activity android:name=".ThemNhanVienActivity"
-            android:label="Thêm nhân viên"
-           ></activity>
-
-        <activity android:name=".ThietLapMatKhauActivity"
-            android:label="Thiết lập mật khẩu"></activity>
-        <activity android:name=".ChitietNhanVienActivity"
-            android:label="Chi tiết nhân viên"></activity>
-
-        <activity android:name=".CapNhatNhanVienActivity"
-            android:label="Cập nhật nhân viên"></activity>7
+        <activity
+            android:name=".ThemNhanVienActivity"
+            android:label="Thêm nhân viên" />
+        <activity
+            android:name=".ThietLapMatKhauActivity"
+            android:label="Thiết lập mật khẩu" />
+        <activity
+            android:name=".ChitietNhanVienActivity"
+            android:label="Chi tiết nhân viên" />
+        <activity
+            android:name=".CapNhatNhanVienActivity"
+            android:label="Cập nhật nhân viên" />
+        7
+        <activity
+            android:name=".LienHeActivity"
+            android:label="@string/title_activity_lien_he"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
-
-
 
 </manifest>
