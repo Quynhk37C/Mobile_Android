@@ -57,17 +57,9 @@ public class Database extends SQLiteOpenHelper {
                 "                  NOT NULL\n" +
                 ");";
         db.execSQL(taoBangPhongBan);
+
+
         db.execSQL("INSERT INTO PhongBan (\n" +
-                "                        MaPB,\n" +
-                "                        TenPB\n" +
-                "                    )\n" +
-                "                    VALUES (\n" +
-                "                        1,\n" +
-                "                        'Cong nghe thong tin'\n" +
-                "                    );\n");
-        db.execSQL(taoBangNhanVien);
-<<<<<<< HEAD
-        /*db.execSQL("INSERT INTO PhongBan (\n" +
                 "                         TenPB,\n" +
                 "                         MaPB\n" +
                 "                     )\n" +
@@ -83,60 +75,8 @@ public class Database extends SQLiteOpenHelper {
                 "                         'Công nghệ thông tin',\n" +
                 "                         3\n" +
                 "                     );\n");
-        db.execSQL("INSERT INTO NhanVien (\n" +
-                "                         Luong,\n" +
-                "                         Email,\n" +
-                "                         DiaChi,\n" +
-                "                         GioiTinh,\n" +
-                "                         SoDT,\n" +
-                "                         TenNV,\n" +
-                "                         MaNV\n" +
-                "                     )\n" +
-                "                     VALUES (\n" +
-                "                         NULL,\n" +
-                "                         'a@gmail.com',\n" +
-                "                         'Quảng Bình',\n" +
-                "                         'Nữ',\n" +
-                "                         12345678,\n" +
-                "                         'Trần Nữ Như Quỳnh',\n" +
-                "                         1\n" +
-                "                     ),\n" +
-                "                     (\n" +
-                "                         NULL,\n" +
-                "                         'b@gmail.com',\n" +
-                "                         'Huế',\n" +
-                "                         'Nam',\n" +
-                "                         12345678,\n" +
-                "                         'Nguyễn Thị Lan',\n" +
-                "                         2\n" +
-                "                     );\n");
-    */
-=======
-        db.execSQL("INSERT INTO NhanVien (\n" +
-                "                        MaNV,\n" +
-                "                        TenNV,\n" +
-                "                        SoDT,\n" +
-                "                        GioiTinh,\n" +
-                "                       DiaChi,\n" +
-                "                        Email,\n" +
-                "                      Luong,\n" +
-                "                       Ngaysinh,\n" +
-                "                        MaPB\n" +
-                "                    )\n" +
-                "                    VALUES (\n" +
-                "                        4,\n" +
-                "                        'Nguyen Thi Thanh',\n" +
-                "                        '01633968489',\n" +
-                "                        'Nu',\n" +
-                "                        'Hue',\n" +
-                "                        'thanhnguyenthi@gmail.com',\n" +
-                "                        300000,\n" +
-                "                        '20-4-1995',\n" +
-                "                        1\n" +
-                "                    );\n");
+        db.execSQL(taoBangNhanVien);
 
-
->>>>>>> f8adcdc7edad66d985116ddb75e7dd8aa7fe6704
     }
 
     @Override
