@@ -85,10 +85,7 @@ public class Database extends SQLiteOpenHelper {
                 "                        'Khoa lý'\n" +
                 "                    );\n");
         db.execSQL(taoBangNhanVien);
-<<<<<<< HEAD
-=======
 
->>>>>>> e13ea8d2883cd8b62d097b1604a07bb0e42ec479
         db.execSQL("INSERT INTO NhanVien (\n" +
                 "                        MaNV,\n" +
                 "                        TenNV,\n" +
@@ -222,11 +219,6 @@ public class Database extends SQLiteOpenHelper {
                 "                        3\n" +
                 "                    );\n");
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e13ea8d2883cd8b62d097b1604a07bb0e42ec479
     }
 
     @Override
