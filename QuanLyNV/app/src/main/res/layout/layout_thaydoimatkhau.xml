@@ -77,7 +77,7 @@
         <EditText
             android:layout_width="150dp"
             android:layout_height="30dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="25dp"
             android:background="#ffffff"
             android:textColor="#000000"
             android:id="@+id/edMatKhau"
@@ -89,34 +89,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:text="Tên Mới"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="25dp"
             android:id="@+id/tvTenDNMoi"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edMatKhau"
             android:layout_toLeftOf="@+id/edMatKhau"
             android:layout_alignLeft="@+id/tvMatKhau"
             android:layout_alignStart="@+id/tvMatKhau" />
-
-        <Button
-            android:text="Lưu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/edMatKhau"
-            android:layout_alignStart="@+id/edMatKhau"
-            android:layout_marginBottom="38dp"
-            android:id="@+id/btnTLLuu" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="Nhập Lại Mật Khẩu"
-            android:id="@+id/tvNhapLaiMK"
-            android:layout_marginTop="14dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_below="@+id/edNhapLai"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
 
         <EditText
             android:layout_width="150dp"
@@ -125,7 +104,7 @@
             android:background="#ffffff"
             android:layout_below="@+id/edNhapLai"
             android:textColor="#000000"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="25dp"
             android:layout_alignLeft="@+id/edTenDNMoi"
             android:layout_alignStart="@+id/edTenDNMoi" />
 
@@ -133,7 +112,7 @@
             android:layout_width="wrap_content"
             android:text="Mật Khẩu Mới"
             android:id="@+id/tvMatKhauMoi"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="28dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edTenDNMoi"
             android:layout_alignLeft="@+id/tvTenDNMoi"
@@ -141,7 +120,7 @@
 
         <EditText
             android:layout_width="150dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="25dp"
             android:layout_height="30dp"
             android:background="#ffffff"
             android:inputType="textPersonName"
@@ -156,12 +135,33 @@
             android:layout_height="30dp"
             android:inputType="textPassword"
             android:background="#ffffff"
+            android:layout_marginTop="25dp"
             android:textColor="#000000"
             android:id="@+id/edNhapLai"
             android:layout_alignBaseline="@+id/tvMatKhauMoi"
             android:layout_alignBottom="@+id/tvMatKhauMoi"
             android:layout_alignLeft="@+id/edTenDNMoi"
             android:layout_alignStart="@+id/edTenDNMoi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Nhập Lại Mật Khẩu"
+            android:id="@+id/tvNhapLaiMK"
+            android:layout_marginTop="13dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/edNhapMatKhauMoi"
+            android:layout_alignLeft="@+id/tvMatKhauMoi"
+            android:layout_alignStart="@+id/tvMatKhauMoi" />
+
+        <Button
+            android:text="Lưu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnTLLuu"
+            android:layout_below="@+id/edNhapMatKhauMoi"
+            android:layout_toRightOf="@+id/textTenDangNhap"
+            android:layout_toEndOf="@+id/textTenDangNhap"
+            android:layout_marginTop="55dp" />
 
 
     </RelativeLayout>

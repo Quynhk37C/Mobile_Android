@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ADFF2F"
+
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="LIÊN HỆ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="141dp"
+        android:layout_marginStart="141dp"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:layout_marginTop="41dp"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:id="@+id/textView5"
+        android:textSize="15dp"
+        android:text="We are great team" />
+
+    <TextView
+        android:text="Please asking us if you have any question for this app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:textSize="15dp"
+        android:layout_alignLeft="@+id/textView5"
+        android:textColor="#000000"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView6" />
+
+    <TextView
+        android:text="ABOUT US"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:text="Copyright by Thanh Quỳnh team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:id="@+id/textView7"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="CONTACT US: thanhnguyenthi086@gmail.com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp" />
+
+    <TextView
+        android:text="trannunhuquynh260595@gmail.com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/textView3"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:layout_marginLeft="27dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginStart="27dp" />
+
+</RelativeLayout>

@@ -89,7 +89,13 @@ public class MainActivity extends AppCompatActivity {
                 editMatKhauDK = (EditText)dialog.findViewById(R.id.editMatKhau);
                 editNhapLaiMk = (EditText)dialog.findViewById(R.id.editNhapLaiMK);
                 editTaiKhoanDK = (EditText)dialog.findViewById(R.id.editTaiKhoanDK);
-
+                btnThoatDN = (Button)dialog.findViewById(R.id.button2);
+                btnThoatDN.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                    }
+                });
                 btnDangKy.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
