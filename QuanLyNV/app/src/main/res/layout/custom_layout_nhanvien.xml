@@ -3,6 +3,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
+    <RelativeLayout
+        android:layout_width="400dp"
+
+        android:layout_height="150dp">
         <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
@@ -17,25 +21,27 @@
             android:textSize="20dp"
             android:id="@+id/vTenNhanVien" />
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:id="@+id/vGioiTinh"
-        android:layout_below="@+id/vTenNhanVien"
-        android:layout_alignRight="@+id/vTenNhanVien"
-        android:layout_alignEnd="@+id/vTenNhanVien" />
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:id="@+id/vGioiTinh"
+            android:layout_below="@+id/vTenNhanVien"
+            android:layout_alignRight="@+id/vTenNhanVien"
+            android:layout_alignEnd="@+id/vTenNhanVien" />
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:id="@+id/vSodienThoai"
-        android:layout_below="@+id/vGioiTinh"
-        android:layout_alignLeft="@+id/vGioiTinh"
-        android:layout_alignStart="@+id/vGioiTinh" />
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:id="@+id/vSodienThoai"
+            android:layout_below="@+id/vGioiTinh"
+            android:layout_alignLeft="@+id/vGioiTinh"
+            android:layout_alignStart="@+id/vGioiTinh" />
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

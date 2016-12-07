@@ -16,7 +16,7 @@ import java.util.List;
  * Created by dell on 2016-10-25.
  */
 
-public class NhanVienDAO {
+public class NhanVienDAO{
     Context context;
     Database dbhelper;
     SQLiteDatabase db;
@@ -45,6 +45,20 @@ public class NhanVienDAO {
         }
         return nhanvien;
     }
+    public  int demSoNV(){
+        List<NhanVienDTO> list=new ArrayList<NhanVienDTO>();
+        db= dbhelper.getWritableDatabase();
+        String sql="SELECT * FROM "+Database.TABLE_NHANVIEN;
+        Cursor c=db.rawQuery(sql,null);
+        c.moveToFirst();
+        int dem =0;
+        while (!c.isAfterLast()){
+            dem++;
+            c.moveToNext();
+        }
+        return dem;
+    }
+
     public int CapNhatNhanVien(NhanVienDTO nhanvien){
         db = dbhelper.getWritableDatabase();
         ContentValues values = new ContentValues();

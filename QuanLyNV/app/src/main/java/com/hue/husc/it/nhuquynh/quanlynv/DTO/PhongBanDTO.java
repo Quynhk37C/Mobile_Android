@@ -35,10 +35,8 @@ public class PhongBanDTO {
     }
 
     public int getSoNhanVien() {
-        return soNhanVien;
+        return 0;
     }
 
-    public void setSoNhanVien(int soNhanVien) {
-        this.soNhanVien = soNhanVien;
-    }
+
 }
