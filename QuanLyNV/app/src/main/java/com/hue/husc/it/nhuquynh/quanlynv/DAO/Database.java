@@ -36,28 +36,26 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String taoBangNhanVien = "CREATE TABLE "+TABLE_NHANVIEN+" (\n" +
-                "    "+MaNV_NhanVien+"     INTEGER PRIMARY KEY AUTOINCREMENT\n" +
+        String taoBangNhanVien = "CREATE TABLE " + TABLE_NHANVIEN + " (\n" +
+                "    " + MaNV_NhanVien + "     INTEGER PRIMARY KEY AUTOINCREMENT\n" +
                 "                     NOT NULL,\n" +
-                "    "+TenNV_NhanVien+"    TEXT    NOT NULL,\n" +
-                "    "+SDT_NhanVien+"     TEXT,\n" +
-                "    "+NgaySinh_NhanVien+"    TEXT,\n" +
-                "    "+GioiTinh_NhanVien+" TEXT    NOT NULL,\n" +
-                "    "+DiaChi_NhanVien+"   TEXT,\n" +
-                "    "+Email_NhanVien+"    TEXT,\n" +
-                "    "+MaPB_PhongBan+"    INTEGER CONSTRAINT PK_MAPB_NHANVIEN REFERENCES PhongBan(MaPB),\n" +
-                "    "+Luong_NhanVien+"    INTEGER\n" +
+                "    " + TenNV_NhanVien + "    TEXT    NOT NULL,\n" +
+                "    " + SDT_NhanVien + "     TEXT,\n" +
+                "    " + NgaySinh_NhanVien + "    TEXT,\n" +
+                "    " + GioiTinh_NhanVien + " TEXT    NOT NULL,\n" +
+                "    " + DiaChi_NhanVien + "   TEXT,\n" +
+                "    " + Email_NhanVien + "    TEXT,\n" +
+                "    " + MaPB_PhongBan + "    INTEGER CONSTRAINT PK_MAPB_NHANVIEN REFERENCES PhongBan(MaPB),\n" +
+                "    " + Luong_NhanVien + "    INTEGER\n" +
                 ");";
 
 
-
-        String taoBangPhongBan = "CREATE TABLE "+TABLE_PHONGBAN+" (\n" +
-                "    "+MaPB_PhongBan+"  INTEGER PRIMARY KEY AUTOINCREMENT\n" +
+        String taoBangPhongBan = "CREATE TABLE " + TABLE_PHONGBAN + " (\n" +
+                "    " + MaPB_PhongBan + "  INTEGER PRIMARY KEY AUTOINCREMENT\n" +
                 "                  NOT NULL,\n" +
-                "    "+TenPB_PhongBan+"    UNIQUE\n" +
+                "    " + TenPB_PhongBan + "    UNIQUE\n" +
                 "                  NOT NULL\n" +
                 ");";
-
         db.execSQL(taoBangPhongBan);
         db.execSQL("INSERT INTO PhongBan (\n" +
                 "                        MaPB,\n" +
@@ -68,6 +66,52 @@ public class Database extends SQLiteOpenHelper {
                 "                        'Công nghệ thông tin'\n" +
                 "                    );\n");
         db.execSQL(taoBangNhanVien);
+<<<<<<< HEAD
+        /*db.execSQL("INSERT INTO PhongBan (\n" +
+                "                         TenPB,\n" +
+                "                         MaPB\n" +
+                "                     )\n" +
+                "                     VALUES (\n" +
+                "                         'Điện Tử Viễn Thông',\n" +
+                "                         1\n" +
+                "                     ),\n" +
+                "                     (\n" +
+                "                         'Toán',\n" +
+                "                         2\n" +
+                "                     ),\n" +
+                "                     (\n" +
+                "                         'Công nghệ thông tin',\n" +
+                "                         3\n" +
+                "                     );\n");
+        db.execSQL("INSERT INTO NhanVien (\n" +
+                "                         Luong,\n" +
+                "                         Email,\n" +
+                "                         DiaChi,\n" +
+                "                         GioiTinh,\n" +
+                "                         SoDT,\n" +
+                "                         TenNV,\n" +
+                "                         MaNV\n" +
+                "                     )\n" +
+                "                     VALUES (\n" +
+                "                         NULL,\n" +
+                "                         'a@gmail.com',\n" +
+                "                         'Quảng Bình',\n" +
+                "                         'Nữ',\n" +
+                "                         12345678,\n" +
+                "                         'Trần Nữ Như Quỳnh',\n" +
+                "                         1\n" +
+                "                     ),\n" +
+                "                     (\n" +
+                "                         NULL,\n" +
+                "                         'b@gmail.com',\n" +
+                "                         'Huế',\n" +
+                "                         'Nam',\n" +
+                "                         12345678,\n" +
+                "                         'Nguyễn Thị Lan',\n" +
+                "                         2\n" +
+                "                     );\n");
+    */
+=======
         db.execSQL("INSERT INTO NhanVien (\n" +
                 "                        MaNV,\n" +
                 "                        TenNV,\n" +
@@ -114,6 +158,7 @@ public class Database extends SQLiteOpenHelper {
                 "                    );\n");
 
 
+>>>>>>> f8adcdc7edad66d985116ddb75e7dd8aa7fe6704
     }
 
     @Override

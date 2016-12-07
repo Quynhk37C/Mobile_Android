@@ -24,7 +24,7 @@ import java.util.List;
  */
 
 
-public class NhanVienActivity extends AppCompatActivity {
+public class    NhanVienActivity extends AppCompatActivity {
     NhanVienDAO dbNhanVien;
     List<NhanVienDTO> listNV;
     Custom_Listview_NhanVien adapter;
@@ -84,7 +84,7 @@ public class NhanVienActivity extends AppCompatActivity {
     }
     private  void XoaNhanVien(){
          idnhanvien=listNV.get(vitri).getManv();
-        if(dbNhanVien.Xoa(idnhanvien)!=1){
+        if(dbNhanVien.Xoa(idnhanvien)!= 1){
             Toast.makeText(getApplicationContext(),"Xóa thành công",Toast.LENGTH_LONG).show();
         }else{
             Toast.makeText(getApplicationContext(),"Xóa thất bại",Toast.LENGTH_LONG).show();
