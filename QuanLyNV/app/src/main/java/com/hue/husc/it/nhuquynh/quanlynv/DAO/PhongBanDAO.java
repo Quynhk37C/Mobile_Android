@@ -54,4 +54,18 @@ public class PhongBanDAO {
         }
         return list;
     }
+
+    public PhongBanDTO LayPB(String id){
+        db = dbhelper.getWritableDatabase();
+        String sql=" select * from "+Database.TABLE_PHONGBAN+" where MaPB = "+id+"";
+        Cursor c=db.rawQuery(sql,null);
+        c.moveToFirst();
+        PhongBanDTO pb = new PhongBanDTO();
+        while (!c.isAfterLast()){
+            pb.setMaPhongBan(c.getString(c.getColumnIndex(Database.MaPB_PhongBan)));
+            pb.setTenPhongBan(c.getString(c.getColumnIndex(Database.TenPB_PhongBan)));
+            c.moveToNext();
+        }
+        return pb;
+    }
 }

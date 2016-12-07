@@ -31,6 +31,7 @@ public class CapNhatNhanVienActivity extends AppCompatActivity {
     Spinner spinner;
     EditText txtTenNhanVien,txtDiaChi,txtSdt,txtLuong,txtNgaySinh,txtEmail;
     Button btnThem,btnThoat;
+    RadioGroup gioiTinh;
     List<PhongBanDTO> listPhongBan;
     int vitri;
     int iMaNV;
@@ -47,7 +48,7 @@ public class CapNhatNhanVienActivity extends AppCompatActivity {
         txtSdt = (EditText)findViewById(R.id.editSuaSoDT);
         txtLuong = (EditText)findViewById(R.id.editSuaLuong);
         txtNgaySinh = (EditText)findViewById(R.id.editSuaNgaySinh);
-
+        gioiTinh = (RadioGroup) findViewById(R.id.rdSuaGioiTinh);
         spinner = (Spinner)findViewById(R.id.spinnerSuaPhongBan);
 
         Intent intent = getIntent();
@@ -70,7 +71,13 @@ public class CapNhatNhanVienActivity extends AppCompatActivity {
 
             }
         });
-
+        NhanVienDTO tam = dbNhanVien.LayNhanVienTheoMa(iMaNV);
+        txtTenNhanVien.setText(tam.getTennv());
+        txtDiaChi.setText(tam.getDiachi());
+        txtEmail.setText(tam.getEmail());
+        txtLuong.setText(tam.getLuong()+"");
+        txtNgaySinh.setText(tam.getNgaysinh());
+        txtSdt.setText(tam.getSdt());
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

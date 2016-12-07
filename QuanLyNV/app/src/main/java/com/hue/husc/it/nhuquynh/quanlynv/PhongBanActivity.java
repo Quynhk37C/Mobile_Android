@@ -134,15 +134,16 @@ public class PhongBanActivity extends AppCompatActivity {
             Button btnSua= (Button) dalSua.findViewById(R.id.btnSua);
             editMaPhongBanSua.setEnabled(false);
             editMaPhongBanSua.setText(listPhongBan.get(position).getMaPhongBan());
-
+            PhongBanDTO tam = dbPhongBan.LayPB(listPhongBan.get(position).getMaPhongBan());
+            editTenPhongBanSua.setText(tam.getTenPhongBan());
             dalSua.show();
             btnSua.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     final PhongBanDTO phongban=new PhongBanDTO();
+
                     phongban.setMaPhongBan(listPhongBan.get(position).getMaPhongBan());
                     phongban.setTenPhongBan(editTenPhongBanSua.getText().toString());
-
                     final AlertDialog.Builder builder = new AlertDialog.Builder(PhongBanActivity.this);
                     builder.setTitle("Thông báo");
                     builder.setMessage("Bạn có muốn sửa không ?");

@@ -111,6 +111,13 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+                btnThoatDK = (Button)dialog.findViewById(R.id.btnThoat);
+                btnThoatDK.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                    }
+                });
                 dialog.show();
             }else{
 
