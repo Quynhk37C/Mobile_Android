@@ -60,6 +60,19 @@ public class Database extends SQLiteOpenHelper {
 
 
         db.execSQL("INSERT INTO PhongBan (\n" +
+<<<<<<< HEAD
+=======
+                "                        MaPB,\n" +
+                "                        TenPB\n" +
+                "                    )\n" +
+                "                    VALUES (\n" +
+                "                        1,\n" +
+                "                        'Công nghệ thông tin'\n" +
+                "                    );\n");
+        db.execSQL(taoBangNhanVien);
+<<<<<<< HEAD
+        /*db.execSQL("INSERT INTO PhongBan (\n" +
+>>>>>>> c998ada6a4ca4132488dffcf8ef5b8ff21509d70
                 "                         TenPB,\n" +
                 "                         MaPB\n" +
                 "                     )\n" +
@@ -75,7 +88,84 @@ public class Database extends SQLiteOpenHelper {
                 "                         'Công nghệ thông tin',\n" +
                 "                         3\n" +
                 "                     );\n");
+<<<<<<< HEAD
         db.execSQL(taoBangNhanVien);
+=======
+        db.execSQL("INSERT INTO NhanVien (\n" +
+                "                         Luong,\n" +
+                "                         Email,\n" +
+                "                         DiaChi,\n" +
+                "                         GioiTinh,\n" +
+                "                         SoDT,\n" +
+                "                         TenNV,\n" +
+                "                         MaNV\n" +
+                "                     )\n" +
+                "                     VALUES (\n" +
+                "                         NULL,\n" +
+                "                         'a@gmail.com',\n" +
+                "                         'Quảng Bình',\n" +
+                "                         'Nữ',\n" +
+                "                         12345678,\n" +
+                "                         'Trần Nữ Như Quỳnh',\n" +
+                "                         1\n" +
+                "                     ),\n" +
+                "                     (\n" +
+                "                         NULL,\n" +
+                "                         'b@gmail.com',\n" +
+                "                         'Huế',\n" +
+                "                         'Nam',\n" +
+                "                         12345678,\n" +
+                "                         'Nguyễn Thị Lan',\n" +
+                "                         2\n" +
+                "                     );\n");
+    */
+=======
+        db.execSQL("INSERT INTO NhanVien (\n" +
+                "                        MaNV,\n" +
+                "                        TenNV,\n" +
+                "                        SoDT,\n" +
+                "                        GioiTinh,\n" +
+                "                       DiaChi,\n" +
+                "                        Email,\n" +
+                "                      Luong,\n" +
+                "                       Ngaysinh,\n" +
+                "                        MaPB\n" +
+                "                    )\n" +
+                "                    VALUES (\n" +
+                "                        4,\n" +
+                "                        'Nguyễn Thị Thanh',\n" +
+                "                        '01633968489',\n" +
+                "                        'Nữ',\n" +
+                "                        'Huế',\n" +
+                "                        'thanhnguyenthi@gmail.com',\n" +
+                "                        300000,\n" +
+                "                        '20-4-1995',\n" +
+                "                        1\n" +
+                "                    );\n");
+        db.execSQL("INSERT INTO NhanVien (\n" +
+                "                        MaNV,\n" +
+                "                        TenNV,\n" +
+                "                        SoDT,\n" +
+                "                        GioiTinh,\n" +
+                "                       DiaChi,\n" +
+                "                        Email,\n" +
+                "                      Luong,\n" +
+                "                       Ngaysinh,\n" +
+                "                        MaPB\n" +
+                "                    )\n" +
+                "                    VALUES (\n" +
+                "                        5,\n" +
+                "                        'Trần Nữ Như Quỳnh',\n" +
+                "                        '01633968489',\n" +
+                "                        'Nữ',\n" +
+                "                        'Huế',\n" +
+                "                        'trnnq@gmail.com',\n" +
+                "                        300000,\n" +
+                "                        '20-5-1995',\n" +
+                "                        1\n" +
+                "                    );\n");
+
+>>>>>>> c998ada6a4ca4132488dffcf8ef5b8ff21509d70
 
     }
 
