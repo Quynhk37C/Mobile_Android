@@ -187,7 +187,7 @@ public class Database extends SQLiteOpenHelper {
                 "                    )\n" +
                 "                    VALUES (\n" +
                 "                        8,\n" +
-                "                        'Hồ Văn Anh',\n" +
+                "                        'Nguyễn Tuấn',\n" +
                 "                        '0163396848',\n" +
                 "                        'Nam',\n" +
                 "                        'Huế',\n" +
