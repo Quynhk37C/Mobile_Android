@@ -65,7 +65,7 @@ public class Database extends SQLiteOpenHelper {
                 "                    )\n" +
                 "                    VALUES (\n" +
                 "                        1,\n" +
-                "                        'Cong nghe thong tin'\n" +
+                "                        'Công nghệ thông tin'\n" +
                 "                    );\n");
         db.execSQL(taoBangNhanVien);
         db.execSQL("INSERT INTO NhanVien (\n" +
@@ -81,13 +81,35 @@ public class Database extends SQLiteOpenHelper {
                 "                    )\n" +
                 "                    VALUES (\n" +
                 "                        4,\n" +
-                "                        'Nguyen Thi Thanh',\n" +
+                "                        'Nguyễn Thị Thanh',\n" +
                 "                        '01633968489',\n" +
-                "                        'Nu',\n" +
-                "                        'Hue',\n" +
+                "                        'Nữ',\n" +
+                "                        'Huế',\n" +
                 "                        'thanhnguyenthi@gmail.com',\n" +
                 "                        300000,\n" +
                 "                        '20-4-1995',\n" +
+                "                        1\n" +
+                "                    );\n");
+        db.execSQL("INSERT INTO NhanVien (\n" +
+                "                        MaNV,\n" +
+                "                        TenNV,\n" +
+                "                        SoDT,\n" +
+                "                        GioiTinh,\n" +
+                "                       DiaChi,\n" +
+                "                        Email,\n" +
+                "                      Luong,\n" +
+                "                       Ngaysinh,\n" +
+                "                        MaPB\n" +
+                "                    )\n" +
+                "                    VALUES (\n" +
+                "                        5,\n" +
+                "                        'Trần Nữ Như Quỳnh',\n" +
+                "                        '01633968489',\n" +
+                "                        'Nữ',\n" +
+                "                        'Huế',\n" +
+                "                        'trnnq@gmail.com',\n" +
+                "                        300000,\n" +
+                "                        '20-5-1995',\n" +
                 "                        1\n" +
                 "                    );\n");
 
