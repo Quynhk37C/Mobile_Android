@@ -112,6 +112,28 @@ public class NhanVienDAO{
         }
         return list;
     }
+    public List<NhanVienDTO> LoadNhanvien(String tennv){
+        List<NhanVienDTO> list=new ArrayList<NhanVienDTO>();
+        db= dbhelper.getWritableDatabase();
+        String sql="SELECT * FROM "+Database.TABLE_NHANVIEN+" WHERE "+Database.TenNV_NhanVien+" LIKE '%"+tennv+"%' ";
+        Cursor c=db.rawQuery(sql,null);
+        c.moveToFirst();
+        while (!c.isAfterLast()){
+            NhanVienDTO nhanvien=new NhanVienDTO();
+            nhanvien.setManv(Integer.parseInt(c.getString(c.getColumnIndex(Database.MaNV_NhanVien))));
+            nhanvien.setTennv(c.getString(c.getColumnIndex(Database.TenNV_NhanVien)));
+            nhanvien.setDiachi(c.getString(c.getColumnIndex(Database.DiaChi_NhanVien)));
+            nhanvien.setEmail(c.getString(c.getColumnIndex(Database.Email_NhanVien)));
+            nhanvien.setGioitinh(c.getString(c.getColumnIndex(Database.GioiTinh_NhanVien)));
+            nhanvien.setLuong(Integer.parseInt(c.getString(c.getColumnIndex(Database.Luong_NhanVien))));
+            nhanvien.setNgaysinh(c.getString(c.getColumnIndex(Database.NgaySinh_NhanVien)));
+            nhanvien.setSdt(c.getString(c.getColumnIndex(Database.SDT_NhanVien)));
+            nhanvien.setMapb(c.getString(c.getColumnIndex(Database.MaPB_PhongBan)));
+            list.add(nhanvien);
+            c.moveToNext();
+        }
+        return list;
+    }
 
     public List<NhanVienDTO> layNhanVienTheoPhong(int mapb){
         List<NhanVienDTO> list = new ArrayList<NhanVienDTO>();

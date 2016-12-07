@@ -20,12 +20,23 @@
         <activity
             android:name=".PhongBanActivity"
             android:label="Phòng Ban"
+<<<<<<< HEAD
+            android:uiOptions="splitActionBarWhenNarrow">
+
+        </activity>
+        <activity android:name=".NhanVienActivity"
+            android:label="Danh sách nhân viên"
+            android:windowSoftInputMode="stateHidden"
+    ></activity>
+        <activity android:name=".NhanVienPhongBanActivity"
+=======
             android:uiOptions="splitActionBarWhenNarrow"></activity>
         <activity
             android:name=".NhanVienActivity"
             android:label="Danh sách nhân viên" />
         <activity
             android:name=".NhanVienPhongBanActivity"
+>>>>>>> e13ea8d2883cd8b62d097b1604a07bb0e42ec479
             android:label="Danh Sách Nhân Viên"
             android:uiOptions="splitActionBarWhenNarrow">
             <meta-data
