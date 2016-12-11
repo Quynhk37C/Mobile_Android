@@ -28,10 +28,10 @@
         android:layout_alignStart="@+id/textView3"
         android:id="@+id/textView5"
         android:textSize="15dp"
-        android:text="We are great team" />
+        android:text="We've been always a great team players" />
 
     <TextView
-        android:text="Please asking us if you have any question for this app"
+        android:text="Please asking us if you have any questions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView5"

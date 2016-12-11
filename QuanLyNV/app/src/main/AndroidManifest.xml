@@ -13,7 +13,6 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -25,10 +24,15 @@
         </activity>
         <activity android:name=".NhanVienActivity"
             android:label="Danh sách nhân viên"
+<<<<<<< HEAD
             android:windowSoftInputMode="stateHidden">
 
         </activity>
 
+=======
+            android:windowSoftInputMode="stateHidden"
+    ></activity>
+>>>>>>> 11a6f10b0f5b93b835210791c8a372268f4abc00
         <activity
             android:name=".NhanVienPhongBanActivity"
             android:label="Danh Sách Nhân Viên"
