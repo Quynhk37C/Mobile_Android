@@ -9,8 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.hue.husc.it.nhuquynh.quanlynv.DAO.NhanVienDAO;
+import com.hue.husc.it.nhuquynh.quanlynv.DAO.PhongBanDAO;
 import com.hue.husc.it.nhuquynh.quanlynv.DTO.NhanVienDTO;
 import com.hue.husc.it.nhuquynh.quanlynv.DTO.PhongBanDTO;
+import com.hue.husc.it.nhuquynh.quanlynv.PhongBanActivity;
 import com.hue.husc.it.nhuquynh.quanlynv.R;
 
 import java.util.ArrayList;
@@ -24,6 +26,7 @@ public class Custom_Listview_PhongBan extends ArrayAdapter<PhongBanDTO> {
     Context context;
     int resource;
     NhanVienDAO nv;
+    PhongBanDAO pb;
     List<PhongBanDTO> objects;
     public Custom_Listview_PhongBan(Context context, int resource, List<PhongBanDTO> objects) {
         super(context, resource, objects);
@@ -44,8 +47,15 @@ public class Custom_Listview_PhongBan extends ArrayAdapter<PhongBanDTO> {
         List<NhanVienDTO> ds = new ArrayList<NhanVienDTO>();
         int d = ds.size();
         PhongBanDTO phongban=objects.get(position);
+        pb= new PhongBanDAO(context);
         vTenPhongBan.setText(phongban.getTenPhongBan());
+<<<<<<< HEAD
         vMAPhongBan.setText(phongban.getMaPhongBan());
+=======
+        vMAPhongBan.setText("Mã phòng ban :"+phongban.getMaPhongBan());
+        vSoNhanVien.setText("Số nhân viên :"+String.valueOf(pb.demSoNV(Integer.parseInt(phongban.getMaPhongBan()))));
+
+>>>>>>> 37d724f6040efbb1d8d1ba7195a8206fe6580879
         return viewrow;
     }
 }

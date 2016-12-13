@@ -1,5 +1,7 @@
 package com.hue.husc.it.nhuquynh.quanlynv.DTO;
 
+import com.hue.husc.it.nhuquynh.quanlynv.DAO.PhongBanDAO;
+
 /**
  * Created by Admin on 10/20/2016.
  */
@@ -35,7 +37,8 @@ public class PhongBanDTO {
     }
 
     public int getSoNhanVien() {
-        return 0;
+
+        return soNhanVien;
     }
 
 
