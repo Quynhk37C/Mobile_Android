@@ -44,18 +44,15 @@ public class Custom_Listview_PhongBan extends ArrayAdapter<PhongBanDTO> {
 
         TextView vTenPhongBan= (TextView) viewrow.findViewById(R.id.ViewListPhongBan);
         TextView vMAPhongBan= (TextView) viewrow.findViewById(R.id.viewlistMaPhongBan);
+        TextView vSoNhanVien=(TextView)viewrow.findViewById(R.id.viewlistSoNhanVien) ;
         List<NhanVienDTO> ds = new ArrayList<NhanVienDTO>();
         int d = ds.size();
         PhongBanDTO phongban=objects.get(position);
         pb= new PhongBanDAO(context);
         vTenPhongBan.setText(phongban.getTenPhongBan());
-<<<<<<< HEAD
-        vMAPhongBan.setText(phongban.getMaPhongBan());
-=======
-        vMAPhongBan.setText("Mã phòng ban :"+phongban.getMaPhongBan());
-        vSoNhanVien.setText("Số nhân viên :"+String.valueOf(pb.demSoNV(Integer.parseInt(phongban.getMaPhongBan()))));
+        vMAPhongBan.setText("Mã phòng:"+phongban.getMaPhongBan());
+        vSoNhanVien.setText("Nhân viên:"+String.valueOf(pb.demSoNV(Integer.parseInt(phongban.getMaPhongBan()))));
 
->>>>>>> 37d724f6040efbb1d8d1ba7195a8206fe6580879
         return viewrow;
     }
 }

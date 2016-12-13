@@ -12,6 +12,17 @@
         android:background="@drawable/pb"
         android:layout_row="0"
         android:layout_column="0" />
+
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:id="@+id/viewlistSoNhanVien"
+        android:layout_row="1"
+        android:layout_column="14" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,17 +30,20 @@
         android:paddingLeft="10dp"
         android:layout_columnWeight="1"
         android:id="@+id/ViewListPhongBan"
+        android:textSize="17dp"
         android:layout_row="0"
         android:layout_column="1" />
 
-
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:text="New Text"
         android:paddingLeft="10dp"
         android:layout_columnWeight="1"
         android:id="@+id/viewlistMaPhongBan"
         android:layout_row="1"
+        android:textSize="13dp"
         android:layout_column="1" />
+
+
 </GridLayout>

@@ -72,7 +72,7 @@
             android:layout_marginTop="15dp"
             android:textSize="17dp"
             android:textColor="#000000"
-            android:text="We are great team"
+            android:text="We are a great team"
             android:layout_centerHorizontal="true"
             android:layout_height="wrap_content" />
         <TextView

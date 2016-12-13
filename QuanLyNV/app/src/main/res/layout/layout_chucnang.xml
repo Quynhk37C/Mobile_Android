@@ -16,7 +16,7 @@
         android:paddingBottom="10dp"
         android:background="#ADD8E6"
         android:textColor="#ffffff"
-        android:text="QUẢN KÝ NHÂN VIÊN" />
+        android:text="QUẢN LÝ NHÂN VIÊN" />
 
 
     <Button
