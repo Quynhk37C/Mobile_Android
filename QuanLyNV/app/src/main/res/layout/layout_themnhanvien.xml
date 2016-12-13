@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
     android:layout_height="match_parent">
 
     <EditText
@@ -9,6 +10,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:hint="Nhập tên nhân viên"
+        android:background="@drawable/border"
         android:layout_marginTop="15dp"
         android:id="@+id/editTenNv"
         android:layout_alignParentTop="true"
@@ -50,6 +52,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/border"
         android:inputType="textPersonName"
         android:hint="Nhập vào địa chỉ"
         android:ems="10"
@@ -63,20 +66,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Nhập ngày sinh"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/border"
         android:ems="10"
-        android:id="@+id/editNgaySinh"
-        android:layout_below="@+id/editSoDT"
-        android:layout_alignLeft="@+id/editSoDT"
-        android:layout_alignStart="@+id/editSoDT" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
+        android:layout_marginTop="15dp"
         android:hint="Nhập email"
         android:id="@+id/editEmail"
         android:layout_below="@+id/editNgaySinh"
@@ -88,7 +81,9 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/border"
         android:ems="10"
+        android:layout_marginTop="15dp"
         android:hint="Nhập số điện thoại"
         android:id="@+id/editSoDT"
         android:layout_below="@+id/editDiaChi"
@@ -98,8 +93,10 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/border"
         android:inputType="textPersonName"
         android:ems="10"
+        android:layout_marginTop="15dp"
         android:hint="Nhập lương"
         android:layout_below="@+id/editEmail"
         android:layout_alignLeft="@+id/editEmail"
@@ -126,6 +123,19 @@
         android:layout_marginRight="49dp"
         android:layout_marginEnd="49dp"
         android:id="@+id/btnThoat" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Nhập ngày sinh"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:layout_marginTop="15dp"
+        android:id="@+id/editNgaySinh"
+        android:layout_below="@+id/editSoDT"
+        android:layout_alignLeft="@+id/editSoDT"
+        android:layout_alignStart="@+id/editSoDT" />
 
 
 </RelativeLayout>

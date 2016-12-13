@@ -58,8 +58,10 @@ public class MainActivity extends AppCompatActivity {
 
         if(taikhoandn.equals(taikhoanconfig) && matkhaudn.equals(matkhauconfig)){
             Toast.makeText(getApplication(),"Đăng nhập thành công",Toast.LENGTH_LONG).show();
-            Intent iPhongBan = new Intent(MainActivity.this,PhongBanActivity.class);
-            startActivity(iPhongBan);
+            Intent imain = new Intent(MainActivity.this,Activity_chucnang.class);
+            startActivity(imain);
+            /*Intent iPhongBan = new Intent(MainActivity.this,PhongBanActivity.class);
+            startActivity(iPhongBan);*/
 
         }else{
             Toast.makeText(getApplication(),"Đăng nhập thất bại",Toast.LENGTH_LONG).show();

@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:text="Name"
+        android:background="@drawable/border"
         android:ems="10"
         android:hint="@string/taikhoandk"
         android:layout_margin="10dp"
@@ -18,6 +19,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
+        android:background="@drawable/border"
         android:layout_margin="10dp"
         android:hint="@string/matkhau"
         android:id="@+id/editMatKhau" />
@@ -27,6 +29,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
+        android:background="@drawable/border"
         android:layout_margin="10dp"
         android:hint="@string/nhaplaimatkhau"
         android:id="@+id/editNhapLaiMK" />

@@ -13,26 +13,18 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".PhongBanActivity"
             android:label="Phòng Ban"
-            android:uiOptions="splitActionBarWhenNarrow">
-
-        </activity>
-        <activity android:name=".NhanVienActivity"
+            android:uiOptions="splitActionBarWhenNarrow"></activity>
+        <activity
+            android:name=".NhanVienActivity"
             android:label="Danh sách nhân viên"
-<<<<<<< HEAD
-            android:windowSoftInputMode="stateHidden">
-
-        </activity>
-
-=======
-            android:windowSoftInputMode="stateHidden"
-    ></activity>
->>>>>>> 11a6f10b0f5b93b835210791c8a372268f4abc00
+            android:windowSoftInputMode="stateHidden"></activity>
         <activity
             android:name=".NhanVienPhongBanActivity"
             android:label="Danh Sách Nhân Viên"
@@ -56,7 +48,8 @@
         <activity
             android:name=".LienHeActivity"
             android:label="@string/title_activity_lien_he"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity_chucnang"></activity>
     </application>
 
 </manifest>

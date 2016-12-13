@@ -177,13 +177,13 @@ public class PhongBanActivity extends AppCompatActivity {
         return super.onContextItemSelected(item);
     }
 
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_phongban,menu);
         return super.onCreateOptionsMenu(menu);
-    }
+    }*/
 
-    @Override
+   /* @Override
 
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -204,6 +204,6 @@ public class PhongBanActivity extends AppCompatActivity {
             startActivity(iHeThongAcivity);
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
 }

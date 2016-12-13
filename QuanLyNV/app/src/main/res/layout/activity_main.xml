@@ -28,6 +28,7 @@
         android:hint="@string/hinttendangnhap"
         android:inputType="textPersonName"
         android:text="Name"
+        android:background="@drawable/border"
         android:ems="10"
         android:layout_margin="20dp"
         android:id="@+id/editTenDangNhap" />
@@ -38,6 +39,7 @@
         android:hint="@string/nhapmatkhau"
         android:inputType="textPassword"
         android:text="Name"
+        android:background="@drawable/border"
         android:layout_margin="20dp"
         android:ems="10"
         android:id="@+id/editMatKhau" />

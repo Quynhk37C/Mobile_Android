@@ -41,14 +41,11 @@ public class Custom_Listview_PhongBan extends ArrayAdapter<PhongBanDTO> {
 
         TextView vTenPhongBan= (TextView) viewrow.findViewById(R.id.ViewListPhongBan);
         TextView vMAPhongBan= (TextView) viewrow.findViewById(R.id.viewlistMaPhongBan);
-        TextView vSoNhanVien= (TextView) viewrow.findViewById(R.id.viewlistSoNhanVien);
         List<NhanVienDTO> ds = new ArrayList<NhanVienDTO>();
         int d = ds.size();
         PhongBanDTO phongban=objects.get(position);
         vTenPhongBan.setText(phongban.getTenPhongBan());
         vMAPhongBan.setText(phongban.getMaPhongBan());
-        vSoNhanVien.setText(String.valueOf(phongban.getSoNhanVien()));
-
         return viewrow;
     }
 }
