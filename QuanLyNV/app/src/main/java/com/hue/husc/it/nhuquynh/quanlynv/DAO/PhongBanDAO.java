@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.hue.husc.it.nhuquynh.quanlynv.DTO.NhanVienDTO;
 import com.hue.husc.it.nhuquynh.quanlynv.DTO.PhongBanDTO;
 
 import java.util.ArrayList;
@@ -67,5 +68,18 @@ public class PhongBanDAO {
             c.moveToNext();
         }
         return pb;
+    }
+    public  int demSoNV(int id){
+        List<NhanVienDTO> list=new ArrayList<NhanVienDTO>();
+        db= dbhelper.getWritableDatabase();
+        String sql="SELECT * FROM "+Database.TABLE_NHANVIEN+" WHERE "+Database.MaPB_PhongBan+" = "+id;
+        Cursor c=db.rawQuery(sql,null);
+        c.moveToFirst();
+        int dem =0;
+        while (!c.isAfterLast()){
+            dem++;
+            c.moveToNext();
+        }
+        return dem;
     }
 }
