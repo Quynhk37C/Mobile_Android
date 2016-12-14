@@ -48,9 +48,9 @@ public class Custom_Listview_NhanVien  extends ArrayAdapter<NhanVienDTO>{
         TextView vSoDT = (TextView)view.findViewById(R.id.vSodienThoai);
         TextView vGioiTinh = (TextView)view.findViewById(R.id.vGioiTinh);
         NhanVienDTO nhanVienDTO = objects.get(position);
-        vTenNhanVien.setText(nhanVienDTO.getTennv());
-        vSoDT.setText(nhanVienDTO.getSdt());
-        vGioiTinh.setText(nhanVienDTO.getGioitinh());
+        vTenNhanVien.setText(nhanVienDTO.getTennv().toUpperCase());
+        vSoDT.setText("SĐT: "+ nhanVienDTO.getSdt());
+        vGioiTinh.setText("Giới Tính: "+ nhanVienDTO.getGioitinh());
         return view;
     }
 }

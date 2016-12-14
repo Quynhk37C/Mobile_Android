@@ -25,6 +25,8 @@
             android:name=".NhanVienActivity"
             android:label="Danh sách nhân viên"
             android:windowSoftInputMode="stateHidden"></activity>
+
+
         <activity
             android:name=".NhanVienPhongBanActivity"
             android:label="Danh Sách Nhân Viên"
@@ -48,6 +50,7 @@
         <activity
             android:name=".LienHeActivity"
             android:label="@string/title_activity_lien_he"
+
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activity_chucnang"></activity>
     </application>

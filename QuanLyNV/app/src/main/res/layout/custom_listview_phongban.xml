@@ -7,43 +7,41 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_rowSpan="2"
+        android:layout_rowSpan="3"
         android:id="@+id/imageView"
         android:background="@drawable/pb"
         android:layout_row="0"
         android:layout_column="0" />
-
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="13dp"
-        android:id="@+id/viewlistSoNhanVien"
-        android:layout_row="1"
-        android:layout_column="14" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:paddingLeft="10dp"
+        android:text="Tên phòng ban"
         android:layout_columnWeight="1"
         android:id="@+id/ViewListPhongBan"
-        android:textSize="17dp"
+        android:textSize="20dp"
         android:layout_row="0"
+        android:paddingLeft="15dp"
         android:layout_column="1" />
 
+
     <TextView
-        android:layout_width="135dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:paddingLeft="10dp"
+        android:text="Mã phòng ban"
         android:layout_columnWeight="1"
         android:id="@+id/viewlistMaPhongBan"
         android:layout_row="1"
-        android:textSize="13dp"
+        android:paddingLeft="15dp"
         android:layout_column="1" />
 
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số nhân viên"
+        android:paddingLeft="15dp"
+        android:layout_columnWeight="1"
+        android:id="@+id/viewlistSoNhanVien"
+        android:layout_row="2"
+        android:layout_marginBottom="15dp"
+        android:layout_column="1" />
 </GridLayout>

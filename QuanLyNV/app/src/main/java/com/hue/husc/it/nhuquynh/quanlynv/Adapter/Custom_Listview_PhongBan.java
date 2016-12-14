@@ -49,9 +49,9 @@ public class Custom_Listview_PhongBan extends ArrayAdapter<PhongBanDTO> {
         int d = ds.size();
         PhongBanDTO phongban=objects.get(position);
         pb= new PhongBanDAO(context);
-        vTenPhongBan.setText(phongban.getTenPhongBan());
-        vMAPhongBan.setText("Mã phòng:"+phongban.getMaPhongBan());
-        vSoNhanVien.setText("Nhân viên:"+String.valueOf(pb.demSoNV(Integer.parseInt(phongban.getMaPhongBan()))));
+        vTenPhongBan.setText(phongban.getTenPhongBan().toUpperCase());
+        vMAPhongBan.setText("Mã phòng ban: "+phongban.getMaPhongBan());
+        vSoNhanVien.setText("Tổng số nhân viên: "+String.valueOf(pb.demSoNV(Integer.parseInt(phongban.getMaPhongBan()))));
 
         return viewrow;
     }

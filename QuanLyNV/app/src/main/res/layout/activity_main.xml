@@ -9,17 +9,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.hue.husc.it.nhuquynh.quanlynv.MainActivity">
-
-
     <TextView
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tendangnhap"
         android:textSize="25dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:textColor="#000000"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="60dp"
+        android:textColor="@color/colorPrimaryDark"
         android:id="@+id/viewDangNhap" />
 
     <EditText
@@ -27,6 +25,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/hinttendangnhap"
         android:inputType="textPersonName"
+        android:padding="10dp"
         android:text="Name"
         android:background="@drawable/border"
         android:ems="10"
@@ -37,6 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nhapmatkhau"
+        android:padding="10dp"
         android:inputType="textPassword"
         android:text="Name"
         android:background="@drawable/border"
@@ -48,6 +48,7 @@
         android:id="@+id/saveLoginCheckBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/editTextPassword"
         android:text="Save Login?"

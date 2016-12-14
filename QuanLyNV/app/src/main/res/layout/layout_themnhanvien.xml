@@ -14,6 +14,7 @@
         android:layout_marginTop="15dp"
         android:id="@+id/editTenNv"
         android:layout_alignParentTop="true"
+        android:layout_marginBottom="15dp"
         android:layout_centerHorizontal="true" />
 
     <RadioGroup
@@ -41,9 +42,11 @@
 
 
     <Spinner
-        android:layout_width="match_parent"
+        android:layout_width="210dp"
+        android:layout_marginLeft="85dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="15dp"
         android:id="@+id/spinnerPhongBan"
         android:layout_below="@+id/rdGioiTinh"
         android:layout_alignParentLeft="true"
