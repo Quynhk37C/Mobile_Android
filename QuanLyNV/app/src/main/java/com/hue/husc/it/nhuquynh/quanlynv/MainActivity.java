@@ -109,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                             editor.putString("MatKhau",editMatKhauDK.getText().toString());
                             editor.commit();
                             Toast.makeText(getApplication(),"Đăng ký thành công",Toast.LENGTH_LONG).show();
+                            dialog.dismiss();
 
                         }
                     }

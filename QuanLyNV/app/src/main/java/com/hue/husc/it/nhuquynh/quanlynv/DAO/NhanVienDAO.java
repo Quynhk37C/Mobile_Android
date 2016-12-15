@@ -16,23 +16,25 @@ import java.util.List;
  * Created by dell on 2016-10-25.
  */
 
-public class NhanVienDAO{
+public class NhanVienDAO {
     Context context;
     Database dbhelper;
     SQLiteDatabase db;
-    public NhanVienDAO(Context context){
+
+    public NhanVienDAO(Context context) {
         this.context = context;
         dbhelper = new Database(context);
     }
-    public NhanVienDTO LayNhanVienTheoMa(int id){
+
+    public NhanVienDTO LayNhanVienTheoMa(int id) {
         db = dbhelper.getWritableDatabase();
-        String sql=" select * from "+ Database.TABLE_NHANVIEN + "," +Database.TABLE_PHONGBAN+
-                " where " + Database.TABLE_NHANVIEN + "." +Database.MaPB_PhongBan+ " = "
-                + Database.TABLE_PHONGBAN+ "." +Database.MaPB_PhongBan + " and " +Database.MaNV_NhanVien + " = "+ id;
-        Cursor c=db.rawQuery(sql,null);
+        String sql = " select * from " + Database.TABLE_NHANVIEN + "," + Database.TABLE_PHONGBAN +
+                " where " + Database.TABLE_NHANVIEN + "." + Database.MaPB_PhongBan + " = "
+                + Database.TABLE_PHONGBAN + "." + Database.MaPB_PhongBan + " and " + Database.MaNV_NhanVien + " = " + id;
+        Cursor c = db.rawQuery(sql, null);
         c.moveToFirst();
-        NhanVienDTO nhanvien=new NhanVienDTO();
-        while (!c.isAfterLast()){
+        NhanVienDTO nhanvien = new NhanVienDTO();
+        while (!c.isAfterLast()) {
             nhanvien.setDiachi(c.getString(c.getColumnIndex(Database.DiaChi_NhanVien)));
             nhanvien.setEmail(c.getString(c.getColumnIndex(Database.Email_NhanVien)));
             nhanvien.setGioitinh(c.getString(c.getColumnIndex(Database.GioiTinh_NhanVien)));
@@ -45,20 +47,20 @@ public class NhanVienDAO{
         }
         return nhanvien;
     }
-    public  int demSoNV(){
-        List<NhanVienDTO> list=new ArrayList<NhanVienDTO>();
-        db= dbhelper.getWritableDatabase();
-        String sql="SELECT * FROM "+Database.TABLE_NHANVIEN;
-        Cursor c=db.rawQuery(sql,null);
+
+    public int demSoNV() {
+        List<NhanVienDTO> list = new ArrayList<NhanVienDTO>();
+        db = dbhelper.getWritableDatabase();
+        String sql = "SELECT * FROM " + Database.TABLE_NHANVIEN;
+        Cursor c = db.rawQuery(sql, null);
         c.moveToFirst();
-        int dem =0;
-        while (!c.isAfterLast()){
+        int dem = 0;
+        while (!c.isAfterLast()) {
             dem++;
             c.moveToNext();
         }
         return dem;
     }
-
     public int CapNhatNhanVien(NhanVienDTO nhanvien){
         db = dbhelper.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -158,4 +160,5 @@ public class NhanVienDAO{
         }
         return list;
     }
+
 }

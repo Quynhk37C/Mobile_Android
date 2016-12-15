@@ -78,6 +78,7 @@ public class CapNhatNhanVienActivity extends AppCompatActivity {
         txtLuong.setText(tam.getLuong()+"");
         txtNgaySinh.setText(tam.getNgaysinh());
         txtSdt.setText(tam.getSdt());
+        spinner.setSelection(dbPhongBan.getPosition(tam.getTenphongban()));
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

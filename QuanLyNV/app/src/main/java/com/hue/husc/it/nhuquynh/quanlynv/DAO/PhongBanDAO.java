@@ -82,4 +82,16 @@ public class PhongBanDAO {
         }
         return dem;
     }
+    public int getPosition(String id) {
+        List<PhongBanDTO> l = layAllPhongBan();
+        int n = l.size();
+        int i=0;
+        while(i<n){
+            if(l.get(i).getTenPhongBan().equals(id))
+                return i;
+            else
+                i++;
+        }
+            return 0;
+    }
 }
