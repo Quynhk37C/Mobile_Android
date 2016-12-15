@@ -32,6 +32,7 @@ public class CapNhatNhanVienActivity extends AppCompatActivity {
     EditText txtTenNhanVien,txtDiaChi,txtSdt,txtLuong,txtNgaySinh,txtEmail;
     Button btnThem,btnThoat;
     RadioGroup gioiTinh;
+    RadioButton rdNam,rdNu;
     List<PhongBanDTO> listPhongBan;
     int vitri;
     int iMaNV;
@@ -50,7 +51,8 @@ public class CapNhatNhanVienActivity extends AppCompatActivity {
         txtNgaySinh = (EditText)findViewById(R.id.editSuaNgaySinh);
         gioiTinh = (RadioGroup) findViewById(R.id.rdSuaGioiTinh);
         spinner = (Spinner)findViewById(R.id.spinnerSuaPhongBan);
-
+        rdNam = (RadioButton)findViewById(R.id.rdNam);
+        rdNu = (RadioButton)findViewById(R.id.rdNu);
         Intent intent = getIntent();
         iMaNV = intent.getExtras().getInt("manv");
         this.setResult(RESULT_OK);
@@ -78,6 +80,10 @@ public class CapNhatNhanVienActivity extends AppCompatActivity {
         txtLuong.setText(tam.getLuong()+"");
         txtNgaySinh.setText(tam.getNgaysinh());
         txtSdt.setText(tam.getSdt());
+       if(tam.getGioitinh().equals("Nữ"))
+            rdNu.setChecked(true);
+        else
+            rdNam.setChecked(true);
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

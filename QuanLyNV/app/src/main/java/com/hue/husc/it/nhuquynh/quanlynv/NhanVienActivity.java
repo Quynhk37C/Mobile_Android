@@ -45,8 +45,7 @@ public class    NhanVienActivity extends AppCompatActivity {
         final LinearLayout layout_nhanvien= (LinearLayout) findViewById(R.id.layout_nhanvien);
         registerForContextMenu(layout_nhanvien);
         dbNhanVien = new NhanVienDAO(this);
-        listNV = new ArrayList<NhanVienDTO>();
-        listNV = dbNhanVien.LoadAllNhanvien();
+
         LoadListViewNhanVien();
         registerForContextMenu(listViewNV);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
@@ -93,7 +92,8 @@ public class    NhanVienActivity extends AppCompatActivity {
     }
 
     private  void LoadListViewNhanVien(){
-
+        listNV = new ArrayList<NhanVienDTO>();
+        listNV = dbNhanVien.LoadAllNhanvien();
         adapter = new Custom_Listview_NhanVien(this,R.layout.custom_layout_nhanvien,listNV);
 
         listViewNV = (ListView)findViewById(R.id.listNhanVien);
@@ -111,7 +111,7 @@ public class    NhanVienActivity extends AppCompatActivity {
     }
     private  void XoaNhanVien(){
          idnhanvien=listNV.get(vitri).getManv();
-        if(dbNhanVien.Xoa(idnhanvien)!= 1){
+        if(dbNhanVien.Xoa(idnhanvien)!= -1){
             Toast.makeText(getApplicationContext(),"Xóa thành công",Toast.LENGTH_LONG).show();
         }else{
             Toast.makeText(getApplicationContext(),"Xóa thất bại",Toast.LENGTH_LONG).show();
@@ -134,6 +134,7 @@ public class    NhanVienActivity extends AppCompatActivity {
             int idnhanvien = listNV.get(vitri).getManv();
             iCapNhatNhanVien.putExtra("manv",idnhanvien);
             startActivityForResult(iCapNhatNhanVien,RESULT_CAPNHATNHANVIEN);
+            LoadListViewNhanVien();
         }
         return super.onContextItemSelected(item);
     }
