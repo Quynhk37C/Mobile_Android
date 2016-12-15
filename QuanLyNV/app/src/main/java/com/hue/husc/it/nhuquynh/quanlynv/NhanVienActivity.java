@@ -45,8 +45,7 @@ public class    NhanVienActivity extends AppCompatActivity {
         final LinearLayout layout_nhanvien= (LinearLayout) findViewById(R.id.layout_nhanvien);
         registerForContextMenu(layout_nhanvien);
         dbNhanVien = new NhanVienDAO(this);
-        listNV = new ArrayList<NhanVienDTO>();
-        listNV = dbNhanVien.LoadAllNhanvien();
+
         LoadListViewNhanVien();
         registerForContextMenu(listViewNV);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
@@ -92,6 +91,10 @@ public class    NhanVienActivity extends AppCompatActivity {
     }
 
     private  void LoadListViewNhanVien(){
+<<<<<<< HEAD
+=======
+        listNV = new ArrayList<NhanVienDTO>();
+>>>>>>> 459d7cb44b1b1f76678dc4433320ba2233787aa3
         listNV = dbNhanVien.LoadAllNhanvien();
         adapter = new Custom_Listview_NhanVien(this,R.layout.custom_layout_nhanvien,listNV);
 
@@ -110,7 +113,11 @@ public class    NhanVienActivity extends AppCompatActivity {
     }
     private  void XoaNhanVien(){
          idnhanvien=listNV.get(vitri).getManv();
+<<<<<<< HEAD
         if(dbNhanVien.Xoa(idnhanvien)!=-1){
+=======
+        if(dbNhanVien.Xoa(idnhanvien)!= -1){
+>>>>>>> 459d7cb44b1b1f76678dc4433320ba2233787aa3
             Toast.makeText(getApplicationContext(),"Xóa thành công",Toast.LENGTH_LONG).show();
         }else{
             Toast.makeText(getApplicationContext(),"Xóa thất bại",Toast.LENGTH_LONG).show();
