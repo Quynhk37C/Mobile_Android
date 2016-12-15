@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.show();
             }else{
 
-                Toast.makeText(getApplication(),"Bạn không thể đăng ký vì  đã có tài khoản",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplication(),"Bạn không thể đăng ký vì đã có tài khoản",Toast.LENGTH_LONG).show();
             }
 
         }

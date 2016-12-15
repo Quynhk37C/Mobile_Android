@@ -80,14 +80,11 @@ public class CapNhatNhanVienActivity extends AppCompatActivity {
         txtLuong.setText(tam.getLuong()+"");
         txtNgaySinh.setText(tam.getNgaysinh());
         txtSdt.setText(tam.getSdt());
-<<<<<<< HEAD
         spinner.setSelection(dbPhongBan.getPosition(tam.getTenphongban()));
-=======
        if(tam.getGioitinh().equals("Nữ"))
             rdNu.setChecked(true);
         else
             rdNam.setChecked(true);
->>>>>>> 459d7cb44b1b1f76678dc4433320ba2233787aa3
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
