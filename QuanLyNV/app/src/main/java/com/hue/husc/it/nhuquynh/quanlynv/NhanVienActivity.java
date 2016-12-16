@@ -36,6 +36,7 @@ public class    NhanVienActivity extends AppCompatActivity {
     int vitri;
     int idnhanvien;
     EditText inputSearch;
+
     public  static int RESULT_CAPNHATNHANVIEN = 100;
 
     @Override
@@ -45,7 +46,7 @@ public class    NhanVienActivity extends AppCompatActivity {
         final LinearLayout layout_nhanvien= (LinearLayout) findViewById(R.id.layout_nhanvien);
         registerForContextMenu(layout_nhanvien);
         dbNhanVien = new NhanVienDAO(this);
-
+        listNV = dbNhanVien.LoadAllNhanvien();
         LoadListViewNhanVien();
         registerForContextMenu(listViewNV);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
@@ -92,8 +93,7 @@ public class    NhanVienActivity extends AppCompatActivity {
 
     private  void LoadListViewNhanVien(){
 
-        listNV = new ArrayList<NhanVienDTO>();
-        listNV = dbNhanVien.LoadAllNhanvien();
+
         adapter = new Custom_Listview_NhanVien(this,R.layout.custom_layout_nhanvien,listNV);
 
         listViewNV = (ListView)findViewById(R.id.listNhanVien);
@@ -143,7 +143,7 @@ public class    NhanVienActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        
+
             LoadListViewNhanVien();
 
     }
